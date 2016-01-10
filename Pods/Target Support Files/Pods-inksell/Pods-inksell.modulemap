@@ -1,0 +1,6 @@
+framework module Pods_inksell {
+  umbrella header "Pods-inksell-umbrella.h"
+
+  export *
+  module * { export * }
+}
