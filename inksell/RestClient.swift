@@ -17,28 +17,28 @@ class RestClient{
     static let get = GetServices()
     static let post = PostServices()
     
-    static func getObject<T:Mappable>(section: String, completionHandler: (T?) -> Void)
+    static func getObject<T:Mappable>(section: String, completionHandler: (T) -> Void)
     {
         makeObjectCall(Alamofire.Method.GET, section: section, body :nil, completionHandler: completionHandler)
     }
     
-    static func getArray<T:Mappable>(section: String, completionHandler: ([T]?) -> Void)
+    static func getArray<T:Mappable>(section: String, completionHandler: ([T]) -> Void)
     {
         makeArrayCall(Alamofire.Method.GET, section:section, body:nil, completionHandler: completionHandler)
     }
     
-    static func postObject<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: (T?) -> Void)
+    static func postObject<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: (T) -> Void)
     {
         makeObjectCall(Alamofire.Method.POST, section: section, body: Mapper<U>().toJSON(body!), completionHandler: completionHandler)
     }
     
-    static func postArray<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: ([T]?) -> Void)
+    static func postArray<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: ([T]) -> Void)
     {
         makeArrayCall(Alamofire.Method.GET, section:section, body: Mapper<U>().toJSON(body!), completionHandler: completionHandler)
     }
     
     
-    private static func makeObjectCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: (T?) -> Void)
+    private static func makeObjectCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: (T) -> Void)
     {
         Alamofire.request(method, "\(apiUrl)/\(section)", parameters: body, encoding: .JSON)
             .responseObject{ (response: Response<T, NSError>) -> Void in
@@ -52,7 +52,7 @@ class RestClient{
         }
     }
     
-    private static func makeArrayCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: ([T]?) -> Void)
+    private static func makeArrayCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: ([T]) -> Void)
     {
         Alamofire.request(method, "\(apiUrl)/\(section)", parameters: body, encoding: .JSON)
             .responseArray{ (response: Response<[T], NSError>) -> Void in

@@ -13,8 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RestClient.get.getCompanies { (companies : [CompanyEntity]?) -> () in
+        //PersistentStorage.sharedInstance.clearAll()
+        var comp: [CompanyEntity]? = PersistentStorage.sharedInstance.getData("companies")
+        
+        PersistentStorage.sharedInstance.saveData("str", object: "hello")
+        var str:String? = PersistentStorage.sharedInstance.getData("str")
+        
+        
+        RestClient.get.getCompanies { (companies : [CompanyEntity]) -> () in
             var company = companies
+            PersistentStorage.sharedInstance.saveData("companies", object: company)
         }
         
         RestClient.get.getLocations(1, completionHandler: {(locations : [LocationEntity]?) -> () in

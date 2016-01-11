@@ -25,6 +25,7 @@
 		ADD8D0D91C427B8A00CFCCD2 /* GetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */; };
 		ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */; };
 		ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */; };
+		ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetServices.swift; sourceTree = "<group>"; };
 		ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
 		ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		AD9630FF1BDD051F00ADC405 /* inksell */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8D0DE1C4398F500CFCCD2 /* Utils */,
 				ADD8D0D51C426FD700CFCCD2 /* Models */,
 				AD2244D41C424C890015BBD3 /* services */,
 				AD2244CF1C424B3D0015BBD3 /* enums */,
@@ -153,6 +156,14 @@
 				ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		ADD8D0DE1C4398F500CFCCD2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		AEFAD9F27DA7CCCB06801EC7 /* Pods */ = {
@@ -299,6 +310,7 @@
 				AD9630EB1BDBF48F00ADC405 /* ViewController.swift in Sources */,
 				AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */,
 				ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */,
+				ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */,
 				AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */,
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,

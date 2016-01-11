@@ -12,7 +12,7 @@ import Alamofire
 
 public class GetServices
 {
-    func getCompanies(completionHandler: ([CompanyEntity]?) -> ())
+    func getCompanies(completionHandler: ([CompanyEntity]) -> ())
     {
         RestClient.getArray("getCompanies", completionHandler: completionHandler)
     }

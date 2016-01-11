@@ -11,7 +11,7 @@ import ObjectMapper
 
 public class PostServices{
     
-    func getCompanies(body: CompanyEntity?, completionHandler: (CompanyEntity?) -> ())
+    func getCompanies(body: CompanyEntity?, completionHandler: (CompanyEntity) -> ())
     {
         RestClient.postObject("hello", body: body, completionHandler: completionHandler)
     }
