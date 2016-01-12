@@ -26,6 +26,11 @@
 		ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */; };
 		ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */; };
 		ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */; };
+		ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */; };
+		ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */; };
+		ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */; };
+		ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */; };
+		ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8301C44F6A000185A40 /* DateTimeTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
 		ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
+		ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnishingType.swift; sourceTree = "<group>"; };
+		ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomobileEntity.swift; sourceTree = "<group>"; };
+		ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAdressEntity.swift; sourceTree = "<group>"; };
+		ADEFF8301C44F6A000185A40 /* DateTimeTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeTransform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +87,10 @@
 		AD2244CF1C424B3D0015BBD3 /* enums */ = {
 			isa = PBXGroup;
 			children = (
+				ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */,
 				AD2244D01C424BA50015BBD3 /* CategoryType.swift */,
 				AD2244D21C424C640015BBD3 /* PlatformType.swift */,
+				ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */,
 			);
 			name = enums;
 			sourceTree = "<group>";
@@ -114,6 +126,11 @@
 		AD9630E71BDBF48F00ADC405 /* inksell */ = {
 			isa = PBXGroup;
 			children = (
+				ADEFF82F1C44F68900185A40 /* Transforms */,
+				AD2244CF1C424B3D0015BBD3 /* enums */,
+				AD2244D41C424C890015BBD3 /* services */,
+				ADD8D0D51C426FD700CFCCD2 /* Models */,
+				ADD8D0DE1C4398F500CFCCD2 /* Utils */,
 				AD9630FF1BDD051F00ADC405 /* inksell */,
 				AD9630E81BDBF48F00ADC405 /* AppDelegate.swift */,
 				AD9630EA1BDBF48F00ADC405 /* ViewController.swift */,
@@ -140,10 +157,6 @@
 		AD9630FF1BDD051F00ADC405 /* inksell */ = {
 			isa = PBXGroup;
 			children = (
-				ADD8D0DE1C4398F500CFCCD2 /* Utils */,
-				ADD8D0D51C426FD700CFCCD2 /* Models */,
-				AD2244D41C424C890015BBD3 /* services */,
-				AD2244CF1C424B3D0015BBD3 /* enums */,
 				AD9630FE1BDD051500ADC405 /* login */,
 			);
 			name = inksell;
@@ -154,6 +167,8 @@
 			children = (
 				ADD8D0D61C42700600CFCCD2 /* CompanyEntity.swift */,
 				ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */,
+				ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */,
+				ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -164,6 +179,14 @@
 				ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		ADEFF82F1C44F68900185A40 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				ADEFF8301C44F6A000185A40 /* DateTimeTransform.swift */,
+			);
+			name = Transforms;
 			sourceTree = "<group>";
 		};
 		AEFAD9F27DA7CCCB06801EC7 /* Pods */ = {
@@ -304,6 +327,9 @@
 			files = (
 				ADD8D0D91C427B8A00CFCCD2 /* GetServices.swift in Sources */,
 				AD96310C1BDD11A400ADC405 /* StartNavigationController.swift in Sources */,
+				ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */,
+				ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */,
+				ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */,
 				AD9631031BDD06B100ADC405 /* RegisterViewController.swift in Sources */,
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
 				AD9631051BDD06D700ADC405 /* VerifyViewController.swift in Sources */,
@@ -314,9 +340,11 @@
 				AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */,
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,
+				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,
 				AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */,
 				ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */,
 				AD9631071BDD072600ADC405 /* AlreadyViewController.swift in Sources */,
+				ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

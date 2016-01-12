@@ -13,21 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //PersistentStorage.sharedInstance.clearAll()
-        var comp: [CompanyEntity]? = PersistentStorage.sharedInstance.getData("companies")
-        
-        PersistentStorage.sharedInstance.saveData("str", object: "hello")
-        var str:String? = PersistentStorage.sharedInstance.getData("str")
-        
-        
-        RestClient.get.getCompanies { (companies : [CompanyEntity]) -> () in
-            var company = companies
-            PersistentStorage.sharedInstance.saveData("companies", object: company)
+        var auto = RestClient.get.getAutomobile("937572ea-a459-41a9-ab64-7d4bb3cfb5cf", postId: 71249) { (automobileEntity : AutomobileEntity) -> () in
+            var aut = automobileEntity
         }
-        
-        RestClient.get.getLocations(1, completionHandler: {(locations : [LocationEntity]?) -> () in
-            var company = locations
-        })
+//        var enumValue = FurnishingType.FullyFurnished.rawValue
+//        //PersistentStorage.sharedInstance.clearAll()
+//        var comp: [CompanyEntity]? = PersistentStorage.sharedInstance.getData("companies")
+//        
+//        PersistentStorage.sharedInstance.saveData("str", object: "hello")
+//        var str:String? = PersistentStorage.sharedInstance.getData("str")
+//        
+//        
+//        RestClient.get.getCompanies { (companies : [CompanyEntity]) -> () in
+//            var company = companies
+//            PersistentStorage.sharedInstance.saveData("companies", object: company)
+//        }
+//        
+//        RestClient.get.getLocations(1, completionHandler: {(locations : [LocationEntity]?) -> () in
+//            var company = locations
+//        })
         
         // Do any additional setup after loading the view, typically from a nib.
     }

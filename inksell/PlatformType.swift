@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PlatformType{
+enum PlatformType:Int{
     case Android
     case WP
     case iOS

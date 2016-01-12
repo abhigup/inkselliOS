@@ -44,9 +44,12 @@ class RestClient{
             .responseObject{ (response: Response<T, NSError>) -> Void in
                 switch(response.result)
                 {
-                case .Failure(let error): break
+                case .Failure(let error):
+                    var err = error
+                    break
                     
                 case .Success(let result):
+                    var res = result;
                     completionHandler(result)
                 }
         }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CategoryType{
+enum CategoryType:Int{
     case AllCategory
     case Electronics
     case Automobile
