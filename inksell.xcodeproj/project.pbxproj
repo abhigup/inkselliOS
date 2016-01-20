@@ -31,6 +31,15 @@
 		ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */; };
 		ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */; };
 		ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8301C44F6A000185A40 /* DateTimeTransform.swift */; };
+		ADEFF8331C4F507500185A40 /* ElectronicEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8321C4F507500185A40 /* ElectronicEntity.swift */; };
+		ADEFF8351C4F509200185A40 /* FurnitureEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8341C4F509200185A40 /* FurnitureEntity.swift */; };
+		ADEFF8371C4F50AF00185A40 /* OtherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8361C4F50AF00185A40 /* OtherEntity.swift */; };
+		ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8381C4F50DD00185A40 /* RealEstateEntity.swift */; };
+		ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF83A1C4F53D000185A40 /* MultiplePostDetailsEntity.swift */; };
+		ADEFF83D1C4F557B00185A40 /* PostIdWithCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF83C1C4F557B00185A40 /* PostIdWithCategory.swift */; };
+		ADEFF83F1C4F55ED00185A40 /* PostSummaryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF83E1C4F55ED00185A40 /* PostSummaryEntity.swift */; };
+		ADEFF8411C4F576700185A40 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8401C4F576700185A40 /* UserEntity.swift */; };
+		ADEFF8431C4F582800185A40 /* VerifyUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,15 @@
 		ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomobileEntity.swift; sourceTree = "<group>"; };
 		ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAdressEntity.swift; sourceTree = "<group>"; };
 		ADEFF8301C44F6A000185A40 /* DateTimeTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeTransform.swift; sourceTree = "<group>"; };
+		ADEFF8321C4F507500185A40 /* ElectronicEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectronicEntity.swift; sourceTree = "<group>"; };
+		ADEFF8341C4F509200185A40 /* FurnitureEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureEntity.swift; sourceTree = "<group>"; };
+		ADEFF8361C4F50AF00185A40 /* OtherEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherEntity.swift; sourceTree = "<group>"; };
+		ADEFF8381C4F50DD00185A40 /* RealEstateEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealEstateEntity.swift; sourceTree = "<group>"; };
+		ADEFF83A1C4F53D000185A40 /* MultiplePostDetailsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplePostDetailsEntity.swift; sourceTree = "<group>"; };
+		ADEFF83C1C4F557B00185A40 /* PostIdWithCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIdWithCategory.swift; sourceTree = "<group>"; };
+		ADEFF83E1C4F55ED00185A40 /* PostSummaryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSummaryEntity.swift; sourceTree = "<group>"; };
+		ADEFF8401C4F576700185A40 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyUserEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +187,15 @@
 				ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */,
 				ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */,
 				ADEA90BC1C44DE23009C5E71 /* ContactAdressEntity.swift */,
+				ADEFF8321C4F507500185A40 /* ElectronicEntity.swift */,
+				ADEFF8341C4F509200185A40 /* FurnitureEntity.swift */,
+				ADEFF8361C4F50AF00185A40 /* OtherEntity.swift */,
+				ADEFF8381C4F50DD00185A40 /* RealEstateEntity.swift */,
+				ADEFF83A1C4F53D000185A40 /* MultiplePostDetailsEntity.swift */,
+				ADEFF83C1C4F557B00185A40 /* PostIdWithCategory.swift */,
+				ADEFF83E1C4F55ED00185A40 /* PostSummaryEntity.swift */,
+				ADEFF8401C4F576700185A40 /* UserEntity.swift */,
+				ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,7 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD8D0D91C427B8A00CFCCD2 /* GetServices.swift in Sources */,
+				ADEFF8371C4F50AF00185A40 /* OtherEntity.swift in Sources */,
 				AD96310C1BDD11A400ADC405 /* StartNavigationController.swift in Sources */,
+				ADEFF8431C4F582800185A40 /* VerifyUserEntity.swift in Sources */,
 				ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */,
 				ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */,
 				ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */,
@@ -334,17 +363,24 @@
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
 				AD9631051BDD06D700ADC405 /* VerifyViewController.swift in Sources */,
 				AD9630EB1BDBF48F00ADC405 /* ViewController.swift in Sources */,
+				ADEFF8331C4F507500185A40 /* ElectronicEntity.swift in Sources */,
+				ADEFF8411C4F576700185A40 /* UserEntity.swift in Sources */,
 				AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */,
 				ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */,
+				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
 				ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */,
 				AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */,
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
+				ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,
 				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,
+				ADEFF83D1C4F557B00185A40 /* PostIdWithCategory.swift in Sources */,
 				AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */,
 				ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */,
 				AD9631071BDD072600ADC405 /* AlreadyViewController.swift in Sources */,
+				ADEFF83F1C4F55ED00185A40 /* PostSummaryEntity.swift in Sources */,
 				ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */,
+				ADEFF8351C4F509200185A40 /* FurnitureEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
