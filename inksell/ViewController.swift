@@ -8,8 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
+    @IBOutlet weak var RegisterBtn: UIButton!
+    @IBOutlet weak var VerifyBtn: UIButton!
+    @IBOutlet weak var AlreadyBtn: UIButton!
+    
+    @IBAction func Navigate(sender: UIButton) {
+        switch(sender)
+        {
+        case RegisterBtn:
+            self.NavigateTo("NavToRegister")
+            break
+        case VerifyBtn:
+            self.NavigateTo("NavToVerify")
+            break
+        case AlreadyBtn:
+            self.NavigateTo("NavToAlready")
+            break
+        default: break
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

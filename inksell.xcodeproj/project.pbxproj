@@ -21,6 +21,9 @@
 		AD9631071BDD072600ADC405 /* AlreadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9631061BDD072600ADC405 /* AlreadyViewController.swift */; };
 		AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9631081BDD073A00ADC405 /* NewCompanyViewController.swift */; };
 		AD96310C1BDD11A400ADC405 /* StartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96310B1BDD11A400ADC405 /* StartNavigationController.swift */; };
+		AD9D42AA1C50CC6C00D21EC5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9D42A91C50CC6C00D21EC5 /* Utilities.swift */; };
+		AD9D42AD1C50CD1C00D21EC5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9D42AC1C50CD1C00D21EC5 /* BaseViewController.swift */; };
+		AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */; };
 		ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0D61C42700600CFCCD2 /* CompanyEntity.swift */; };
 		ADD8D0D91C427B8A00CFCCD2 /* GetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */; };
 		ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */; };
@@ -61,6 +64,9 @@
 		AD9631061BDD072600ADC405 /* AlreadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlreadyViewController.swift; path = inksell/login/AlreadyViewController.swift; sourceTree = "<group>"; };
 		AD9631081BDD073A00ADC405 /* NewCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCompanyViewController.swift; path = inksell/login/NewCompanyViewController.swift; sourceTree = "<group>"; };
 		AD96310B1BDD11A400ADC405 /* StartNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartNavigationController.swift; path = inksell/login/StartNavigationController.swift; sourceTree = "<group>"; };
+		AD9D42A91C50CC6C00D21EC5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AD9D42AC1C50CD1C00D21EC5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		ADD8D0D61C42700600CFCCD2 /* CompanyEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyEntity.swift; sourceTree = "<group>"; };
 		ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetServices.swift; sourceTree = "<group>"; };
 		ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
@@ -175,9 +181,18 @@
 		AD9630FF1BDD051F00ADC405 /* inksell */ = {
 			isa = PBXGroup;
 			children = (
+				AD9D42AB1C50CD0300D21EC5 /* common */,
 				AD9630FE1BDD051500ADC405 /* login */,
 			);
 			name = inksell;
+			sourceTree = "<group>";
+		};
+		AD9D42AB1C50CD0300D21EC5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				AD9D42AC1C50CD1C00D21EC5 /* BaseViewController.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		ADD8D0D51C426FD700CFCCD2 /* Models */ = {
@@ -204,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */,
+				AD9D42A91C50CC6C00D21EC5 /* Utilities.swift */,
+				AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -356,9 +373,11 @@
 				ADEFF8371C4F50AF00185A40 /* OtherEntity.swift in Sources */,
 				AD96310C1BDD11A400ADC405 /* StartNavigationController.swift in Sources */,
 				ADEFF8431C4F582800185A40 /* VerifyUserEntity.swift in Sources */,
+				AD9D42AD1C50CD1C00D21EC5 /* BaseViewController.swift in Sources */,
 				ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */,
 				ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */,
 				ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */,
+				AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */,
 				AD9631031BDD06B100ADC405 /* RegisterViewController.swift in Sources */,
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
 				AD9631051BDD06D700ADC405 /* VerifyViewController.swift in Sources */,
@@ -370,6 +389,7 @@
 				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
 				ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */,
 				AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */,
+				AD9D42AA1C50CC6C00D21EC5 /* Utilities.swift in Sources */,
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
 				ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,

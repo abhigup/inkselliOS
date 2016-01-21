@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerifyViewController: UIViewController {
+class VerifyViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

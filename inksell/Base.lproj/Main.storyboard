@@ -26,7 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4xO-qB-xRe" kind="show" identifier="registerNav" id="wHO-r6-xMR"/>
+                                    <action selector="Navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpB-y1-2dF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFy-6o-mqc">
@@ -36,14 +36,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jqp-Kr-BW6" kind="show" id="1Ed-yo-BWZ"/>
+                                    <action selector="Navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gD2-yG-byg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN5-ps-yRp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Already Registered?"/>
                                 <connections>
-                                    <segue destination="h4V-X3-8Ch" kind="show" id="uT1-aJ-lqY"/>
+                                    <action selector="Navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqu-AE-SbZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,6 +94,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KBm-Za-c41"/>
+                    <connections>
+                        <outlet property="AlreadyBtn" destination="UN5-ps-yRp" id="efC-ai-209"/>
+                        <outlet property="RegisterBtn" destination="h9t-Pc-DrP" id="IuC-R1-BUh"/>
+                        <outlet property="VerifyBtn" destination="tFy-6o-mqc" id="0Vy-TU-Wv7"/>
+                        <segue destination="4xO-qB-xRe" kind="show" identifier="NavToRegister" id="uFk-br-U8Z"/>
+                        <segue destination="Jqp-Kr-BW6" kind="show" identifier="NavToVerify" id="0fX-t7-fOv"/>
+                        <segue destination="h4V-X3-8Ch" kind="show" identifier="NavToAlready" id="Omr-Wy-TPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

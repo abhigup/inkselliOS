@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewCompanyViewController: UIViewController {
+class NewCompanyViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
