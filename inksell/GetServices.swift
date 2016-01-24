@@ -22,7 +22,7 @@ public class GetServices
         RestClient.getObject("GetFullElectronicPost/\(postId)/\(guid)", completionHandler: completionHandler)
     }
     
-    func getLocations(companyId: Int, completionHandler: ([LocationEntity]?) -> ())
+    func getLocations(companyId: Int, completionHandler: ([LocationEntity]) -> ())
     {
         RestClient.getArray("getLocations/\(companyId)", completionHandler: completionHandler)
     }

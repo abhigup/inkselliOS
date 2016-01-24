@@ -7,9 +7,95 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
+import SCLAlertView
 
 class RegisterViewController: BaseViewController {
 
+    @IBOutlet weak var Name: UITextField!
+    @IBOutlet weak var Company: UITextField!
+    @IBOutlet weak var Location: UITextField!
+    @IBOutlet weak var emailid: UITextField!
+    @IBOutlet weak var NewRegister: UIButton!
+    @IBOutlet weak var RegisterBtn: UIButton!
+    @IBOutlet weak var CompanyDomain: UILabel!
+    
+    var companies: [CompanyEntity]?
+    var locations: [LocationEntity]?
+    
+    var selectedCompanyIndex: Int=0
+    var selectedLocationIndex:Int=0
+    
+    required init(coder decoder: NSCoder) {
+        super.init(coder: decoder)!
+        RestClient.get.getCompanies { (companies) -> () in
+            self.companies = companies
+        }
+    }
+
+    func LoadLocations(CompanyId: Int)
+    {
+        RestClient.get.getLocations(CompanyId, completionHandler: { (locations) -> () in
+            self.locations = locations})
+    }
+    
+    
+    @IBAction func Navigate(sender: UIButton) {
+        switch(sender)
+        {
+        case NewRegister:
+            NavigateTo("NavToNewRegister");
+            break;
+        case RegisterBtn:
+            if(self.Name.text.isNilOrEmpty || self.Company.text.isNilOrEmpty || self.Location.text.isNilOrEmpty || self.emailid.text.isNilOrEmpty)
+            {
+                SCLAlertView().showError("Invalid Info", subTitle: "Please provide all the Details")
+                return
+            }
+            NavigateTo("NavToVerify");
+            break;
+        default:
+            break;
+        }
+    }
+    
+    @IBAction func ShowActionSheet(sender: UITextField) {
+        switch(sender)
+        {
+        case Company:
+            ActionSheetStringPicker.showPickerWithTitle("Select Company", rows: companies!.flatMap({$0.CompanyName})
+                , initialSelection: selectedCompanyIndex, doneBlock: {picker, companyIndex, indexes in
+                    self.selectedCompanyIndex = companyIndex
+                    self.Company.text = self.companies![companyIndex].CompanyName!
+                    self.LoadLocations(self.companies![companyIndex].CompanyId!)
+                    self.Location.text = ""
+                    self.CompanyDomain.text = self.companies![companyIndex].CompanyDomain
+                    self.selectedLocationIndex = 0
+                    return
+                }, cancelBlock: { ActionMultipleStringCancelBlock in return }, origin: sender)
+        break
+        
+        case Location:
+            if(locations == nil)
+            {
+                SCLAlertView().showError("No Company Selected", subTitle: "Please select a company.")
+                return
+            }
+            ActionSheetStringPicker.showPickerWithTitle("Select Location", rows: locations!.flatMap({$0.LocationName})
+                , initialSelection: selectedLocationIndex, doneBlock: { picker, locationIndex, indexes in
+                    self.selectedLocationIndex = locationIndex
+                    self.Location.text = self.locations![locationIndex].LocationName!
+                    return
+                    }, cancelBlock: { ActionMultipleStringCancelBlock in return }, origin: sender)
+        break
+            
+        default:
+            break
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

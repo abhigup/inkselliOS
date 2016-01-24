@@ -16,7 +16,7 @@ class CompanyEntity : Mappable{
     var CompanyDomain:String?
     
     required init?(_ map: Map) {
-        
+    
     }
     
     func mapping(map: Map) {

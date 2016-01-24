@@ -27,7 +27,6 @@ class ViewController: BaseViewController {
             self.NavigateTo("NavToAlready")
             break
         default: break
-            
         }
         
     }

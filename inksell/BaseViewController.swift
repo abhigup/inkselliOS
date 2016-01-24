@@ -26,5 +26,11 @@ class BaseViewController : UIViewController {
     {
         self.performSegueWithIdentifier(identifier, sender: anyObject)
     }
+    
+    override func viewDidLoad() {
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.barTintColor = UIColor().TitlePrimaryDark()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+    }
 
 }

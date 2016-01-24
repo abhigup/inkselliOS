@@ -11,6 +11,9 @@
 		AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D01C424BA50015BBD3 /* CategoryType.swift */; };
 		AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D21C424C640015BBD3 /* PlatformType.swift */; };
 		AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D51C424CB00015BBD3 /* RestClient.swift */; };
+		AD4D99CF1C54414C0011C31E /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99CE1C54414C0011C31E /* MyColors.swift */; };
+		AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99D01C54DB9D0011C31E /* AlertController.swift */; };
+		AD4D99D31C54DCDB0011C31E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99D21C54DCDB0011C31E /* Extentions.swift */; };
 		AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9630E81BDBF48F00ADC405 /* AppDelegate.swift */; };
 		AD9630EB1BDBF48F00ADC405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9630EA1BDBF48F00ADC405 /* ViewController.swift */; };
 		AD9630EE1BDBF48F00ADC405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9630EC1BDBF48F00ADC405 /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 		AD2244D01C424BA50015BBD3 /* CategoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		AD2244D21C424C640015BBD3 /* PlatformType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformType.swift; sourceTree = "<group>"; };
 		AD2244D51C424CB00015BBD3 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		AD4D99CE1C54414C0011C31E /* MyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
+		AD4D99D01C54DB9D0011C31E /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		AD4D99D21C54DCDB0011C31E /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		AD9630E51BDBF48F00ADC405 /* inksell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inksell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9630E81BDBF48F00ADC405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9630EA1BDBF48F00ADC405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +227,9 @@
 				ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */,
 				AD9D42A91C50CC6C00D21EC5 /* Utilities.swift */,
 				AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */,
+				AD4D99CE1C54414C0011C31E /* MyColors.swift */,
+				AD4D99D01C54DB9D0011C31E /* AlertController.swift */,
+				AD4D99D21C54DCDB0011C31E /* Extentions.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 				ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */,
 				ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */,
 				ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */,
+				AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */,
 				AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */,
 				AD9631031BDD06B100ADC405 /* RegisterViewController.swift in Sources */,
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
@@ -385,6 +395,7 @@
 				ADEFF8331C4F507500185A40 /* ElectronicEntity.swift in Sources */,
 				ADEFF8411C4F576700185A40 /* UserEntity.swift in Sources */,
 				AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */,
+				AD4D99CF1C54414C0011C31E /* MyColors.swift in Sources */,
 				ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */,
 				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
 				ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */,
@@ -394,6 +405,7 @@
 				ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,
 				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,
+				AD4D99D31C54DCDB0011C31E /* Extentions.swift in Sources */,
 				ADEFF83D1C4F557B00185A40 /* PostIdWithCategory.swift in Sources */,
 				AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */,
 				ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */,

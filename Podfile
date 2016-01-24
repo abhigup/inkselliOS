@@ -8,5 +8,7 @@ pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'ObjectMapper', '~> 1.1'
 pod 'AlamofireObjectMapper', '~> 2.1'
+pod 'ActionSheetPicker-3.0', '~> 2.0.4'
+pod 'SCLAlertView'
 end
 
