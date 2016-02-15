@@ -18,7 +18,8 @@ class ViewController: BaseViewController {
         switch(sender)
         {
         case RegisterBtn:
-            self.NavigateTo("NavToRegister")
+            self.NavigateToStoryBoard("Home", identifier: "Home", anyObject: "hello")
+            //self.NavigateTo("NavToRegister")
             break
         case VerifyBtn:
             self.NavigateTo("NavToVerify")
@@ -34,9 +35,9 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var auto = RestClient.get.getAutomobile("937572ea-a459-41a9-ab64-7d4bb3cfb5cf", postId: 71249) { (automobileEntity : AutomobileEntity) -> () in
-            var aut = automobileEntity
-        }
+//        var auto = RestClient.get.getAutomobile("937572ea-a459-41a9-ab64-7d4bb3cfb5cf", postId: 71249) { (automobileEntity : AutomobileEntity) -> () in
+//            var aut = automobileEntity
+        //}
 //        var enumValue = FurnishingType.FullyFurnished.rawValue
 //        //PersistentStorage.sharedInstance.clearAll()
 //        var comp: [CompanyEntity]? = PersistentStorage.sharedInstance.getData("companies")

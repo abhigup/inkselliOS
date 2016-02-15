@@ -10,9 +10,7 @@ import UIKit
 
 class NewCompanyViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func initController() {
         // Do any additional setup after loading the view.
     }
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 protocol OptionalString {}
 extension String: OptionalString {}
@@ -23,3 +23,25 @@ extension String{
         return (self ?? "").isEmpty
     }
 }
+
+extension UITabBarController {
+        func setupSwipeGestureRecognizers(cycleThroughTabs: Bool = false) {
+            let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipeLeft:")
+            swipeLeftGestureRecognizer.direction = .Left
+            self.tabBar.addGestureRecognizer(swipeLeftGestureRecognizer)
+            
+            let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipeRight:")
+            swipeRightGestureRecognizer.direction = .Right
+            self.tabBar.addGestureRecognizer(swipeRightGestureRecognizer)
+        }
+        
+        func handleSwipeLeft(gesture: UIGestureRecognizer) {
+            self.selectedIndex -= 1
+        }
+        
+        func handleSwipeRight(gesture: UIGestureRecognizer) {
+            self.selectedIndex += 1
+        }
+    
+    }
+

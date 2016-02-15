@@ -9,6 +9,7 @@
 import UIKit
 import ActionSheetPicker_3_0
 import SCLAlertView
+import Toast_Swift
 
 class RegisterViewController: BaseViewController {
 
@@ -26,17 +27,24 @@ class RegisterViewController: BaseViewController {
     var selectedCompanyIndex: Int=0
     var selectedLocationIndex:Int=0
     
-    required init(coder decoder: NSCoder) {
-        super.init(coder: decoder)!
-        RestClient.get.getCompanies { (companies) -> () in
+    override func initController() {
+        RestClient.get.getCompanies(InksellCallback<[CompanyEntity]>(success: {
+            companies in
             self.companies = companies
-        }
+            }, failure: { (ResponseStatus) -> Void in
+                
+        }))
     }
+    
 
     func LoadLocations(CompanyId: Int)
     {
-        RestClient.get.getLocations(CompanyId, completionHandler: { (locations) -> () in
-            self.locations = locations})
+        RestClient.get.getLocations(CompanyId, callback: InksellCallback<[LocationEntity]>(success:
+            { locations in
+                self.locations = locations
+            }, failure: { (ResponseStatus) -> Void in
+                
+        }))
     }
     
     
@@ -49,10 +57,12 @@ class RegisterViewController: BaseViewController {
         case RegisterBtn:
             if(self.Name.text.isNilOrEmpty || self.Company.text.isNilOrEmpty || self.Location.text.isNilOrEmpty || self.emailid.text.isNilOrEmpty)
             {
-                SCLAlertView().showError("Invalid Info", subTitle: "Please provide all the Details")
+                view.makeToast(message: "Please provide all the details")
                 return
             }
-            NavigateTo("NavToVerify");
+            
+            PersistentStorage.sharedInstance.saveData(StorageConstants.IsAlreadyRegistered, object: false)
+            NavigateTo("NavToVerify", anyObject: false);
             break;
         default:
             break;

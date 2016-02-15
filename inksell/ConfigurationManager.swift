@@ -12,12 +12,9 @@ class ConfigurationManager {
     
     static let sharedInstance = ConfigurationManager()
     
-    var userGuid:String
-    var userData:UserEntity?
-    
-    init()
+    func InitUserData()
     {
-        _ = userData
-        userGuid = "hello"
+        AppData.userData = PersistentStorage.sharedInstance.getData(StorageConstants.UserData)
+        AppData.userGuid = PersistentStorage.sharedInstance.getData(StorageConstants.UserUUID)
     }
 }

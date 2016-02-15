@@ -13,6 +13,6 @@ public class PostServices{
     
     func getCompanies(body: CompanyEntity?, completionHandler: (CompanyEntity) -> ())
     {
-        RestClient.postObject("hello", body: body, completionHandler: completionHandler)
+        //RestClient.postObject("hello", body: body, completionHandler: completionHandler)
     }
 }

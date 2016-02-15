@@ -86,16 +86,20 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-inksell/ActionSheetPicker_3_0.framework"
   install_framework "Pods-inksell/Alamofire.framework"
+  install_framework "Pods-inksell/AlamofireImage.framework"
   install_framework "Pods-inksell/AlamofireObjectMapper.framework"
   install_framework "Pods-inksell/ObjectMapper.framework"
   install_framework "Pods-inksell/SCLAlertView.framework"
   install_framework "Pods-inksell/SwiftyJSON.framework"
+  install_framework "Pods-inksell/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-inksell/ActionSheetPicker_3_0.framework"
   install_framework "Pods-inksell/Alamofire.framework"
+  install_framework "Pods-inksell/AlamofireImage.framework"
   install_framework "Pods-inksell/AlamofireObjectMapper.framework"
   install_framework "Pods-inksell/ObjectMapper.framework"
   install_framework "Pods-inksell/SCLAlertView.framework"
   install_framework "Pods-inksell/SwiftyJSON.framework"
+  install_framework "Pods-inksell/Toast_Swift.framework"
 fi

@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
 # Uncomment this line if you're using Swift
@@ -10,5 +11,7 @@ pod 'ObjectMapper', '~> 1.1'
 pod 'AlamofireObjectMapper', '~> 2.1'
 pod 'ActionSheetPicker-3.0', '~> 2.0.4'
 pod 'SCLAlertView'
+pod 'Toast-Swift', '~> 1.0.0'
+pod 'AlamofireImage', '~> 2.0'
 end
 

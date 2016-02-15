@@ -8,11 +8,9 @@
 
 import UIKit
 
-class StartNavigationController: UINavigationController {
+class StartNavigationController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func initController() {
         // Do any additional setup after loading the view.
     }
 

@@ -27,10 +27,29 @@ class BaseViewController : UIViewController {
         self.performSegueWithIdentifier(identifier, sender: anyObject)
     }
     
+    func NavigateToStoryBoard(storyBoard:String, identifier: String)
+    {
+        let storyboard = UIStoryboard(name: storyBoard, bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(identifier) as UIViewController
+        presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func NavigateToStoryBoard(storyBoard:String, identifier: String, anyObject:AnyObject)
+    {
+        let storyboard = UIStoryboard(name: storyBoard, bundle: anyObject as? NSBundle)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(identifier) as UIViewController
+        presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func initController(){}
+    
     override func viewDidLoad() {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.barTintColor = UIColor().TitlePrimaryDark()
+        self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        super.viewDidLoad()
+        initController()
     }
 
 }

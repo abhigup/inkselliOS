@@ -10,10 +10,29 @@ import UIKit
 
 class AlreadyViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var EmailId: UITextField!
+    @IBOutlet weak var SubmitBtn: UIButton!
+    
+    @IBAction func Navigate(sender: UIButton) {
+        switch(sender)
+        {
+        case SubmitBtn:
+            if(EmailId.text.isNilOrEmpty)
+            {
+                view.makeToast(message: "Please provide a valid registered email id.")
+                return
+            }
+            
+            RestClient.get.alreadyRegistered(EmailId.text!, callback: InksellCallback<String>(success: {
+                guid in
+                AppData.userGuid = guid
+                PersistentStorage.sharedInstance.saveData(StorageConstants.UserUUID, object: guid)
+                PersistentStorage.sharedInstance.saveData(StorageConstants.IsAlreadyRegistered, object: true)
+                self.NavigateTo("NavToVerify", anyObject: true)
+                }))
+        default:
+            break
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -127,6 +127,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96k-uS-oXh"/>
+                                    <action selector="VerifyUser:" destination="Jqp-Kr-BW6" eventType="touchUpInside" id="mGf-56-zNQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yLF-RG-j2S">
@@ -173,10 +174,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="VerifyBtn" destination="Kz6-fR-5cd" id="Ian-7A-th5"/>
+                        <outlet property="code" destination="yLF-RG-j2S" id="2f1-5A-lex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNC-hp-01j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.5" y="957"/>
+            <point key="canvasLocation" x="1293" y="1303"/>
         </scene>
         <!--Already Registered-->
         <scene sceneID="C8S-Du-feM">
@@ -202,7 +207,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTh-V8-5SG"/>
+                                    <action selector="Navigate:" destination="h4V-X3-8Ch" eventType="touchUpInside" id="ldx-D2-2ue"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,10 +249,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="EmailId" destination="cie-iA-mUo" id="qwt-io-WGO"/>
+                        <outlet property="SubmitBtn" destination="m8w-qL-bFV" id="UZn-rP-7Rd"/>
+                        <segue destination="Jqp-Kr-BW6" kind="show" identifier="NavToVerify" id="Hap-8H-Liv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoo-fi-mlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026.5" y="957"/>
+            <point key="canvasLocation" x="2026" y="1303"/>
         </scene>
         <!--Register-->
         <scene sceneID="yUD-UV-han">
@@ -302,7 +312,7 @@
                                     <constraint firstAttribute="width" constant="142" id="aFQ-HH-mYl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -579,6 +589,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R19-Ws-Scq"/>
+        <segue reference="Hap-8H-Liv"/>
     </inferredMetricsTieBreakers>
 </document>

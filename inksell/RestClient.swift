@@ -17,28 +17,54 @@ class RestClient{
     static let get = GetServices()
     static let post = PostServices()
     
-    static func getObject<T:Mappable>(section: String, completionHandler: (T) -> Void)
+    static func getString<T>(section:String,callback:InksellCallback<T>)
     {
-        makeObjectCall(Alamofire.Method.GET, section: section, body :nil, completionHandler: completionHandler)
+        makeStringCall(Alamofire.Method.GET, section: section, body :nil, callback: callback)
     }
     
-    static func getArray<T:Mappable>(section: String, completionHandler: ([T]) -> Void)
+    static func getObject<T:Mappable>(section: String, callback:InksellCallback<T>)
     {
-        makeArrayCall(Alamofire.Method.GET, section:section, body:nil, completionHandler: completionHandler)
+        makeObjectCall(Alamofire.Method.GET, section: section, body :nil, callback: callback)
     }
     
-    static func postObject<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: (T) -> Void)
+    static func getArray<T:Mappable>(section: String, callback:InksellCallback<[T]>)
     {
-        makeObjectCall(Alamofire.Method.POST, section: section, body: Mapper<U>().toJSON(body!), completionHandler: completionHandler)
+        makeArrayCall(Alamofire.Method.GET, section:section, body:nil, callback: callback)
     }
     
-    static func postArray<T:Mappable, U:Mappable>(section: String, body:U?, completionHandler: ([T]) -> Void)
+    static func postString<T, U:Mappable>(section: String, body:U?, callback:InksellCallback<T>)    {
+        makeStringCall(Alamofire.Method.POST, section: section, body :Mapper<U>().toJSON(body!), callback: callback)
+    }
+    
+    static func postObject<T:Mappable, U:Mappable>(section: String, body:U?, callback:InksellCallback<T>)
     {
-        makeArrayCall(Alamofire.Method.GET, section:section, body: Mapper<U>().toJSON(body!), completionHandler: completionHandler)
+        makeObjectCall(Alamofire.Method.POST, section: section, body: Mapper<U>().toJSON(body!), callback: callback)
+    }
+    
+    static func postArray<T:Mappable, U:Mappable>(section: String, body:U?, callback:InksellCallback<[T]>)
+    {
+        makeArrayCall(Alamofire.Method.GET, section:section, body: Mapper<U>().toJSON(body!), callback: callback)
+    }
+    
+    private static func makeStringCall<T>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, callback:InksellCallback<T>)
+    {
+        Alamofire.request(method, "\(apiUrl)/\(section)", parameters: body, encoding: .JSON)
+            .responseJSON{ response in
+                
+                    switch(response.result)
+                    {
+                    case .Failure(let error):
+                        var err = error
+                        break
+                        
+                    case .Success(let result):
+                        callback.onResponse(result as? T)
+                    }
+        }
     }
     
     
-    private static func makeObjectCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: (T) -> Void)
+    private static func makeObjectCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, callback:InksellCallback<T>)
     {
         Alamofire.request(method, "\(apiUrl)/\(section)", parameters: body, encoding: .JSON)
             .responseObject{ (response: Response<T, NSError>) -> Void in
@@ -49,13 +75,12 @@ class RestClient{
                     break
                     
                 case .Success(let result):
-                    var res = result;
-                    completionHandler(result)
+                    callback.onResponse(result)
                 }
         }
     }
     
-    private static func makeArrayCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, completionHandler: ([T]) -> Void)
+    private static func makeArrayCall<T:Mappable>(method:Alamofire.Method, section: String, body: [String: AnyObject]?, callback:InksellCallback<[T]>)
     {
         Alamofire.request(method, "\(apiUrl)/\(section)", parameters: body, encoding: .JSON)
             .responseArray{ (response: Response<[T], NSError>) -> Void in
@@ -64,7 +89,7 @@ class RestClient{
                 case .Failure(let error): break
                     
                 case .Success(let result):
-                    completionHandler(result)
+                    callback.onResponse(result)
                 }
         }
     }
