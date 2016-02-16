@@ -22,7 +22,12 @@ class PostSummaryEntity : Mappable {
     var categoryid:Int?
     var PostDefaultImage:String?
     var isFavourite:Bool?
-    var HasPostTitlePic:Bool?
+    
+    var HasPostTitlePic:Bool{ get{
+        return !self.PostDefaultImage.isNilOrEmpty
+        }
+    }
+    
     var isEditable:Bool?
     
     required init?(_ map: Map) {
@@ -42,7 +47,6 @@ class PostSummaryEntity : Mappable {
         categoryid <- map["categoryid"]
         PostDefaultImage <- map["PostDefaultImage"]
         isFavourite <- map["isFavourite"]
-        HasPostTitlePic <- map["HasPostTitlePic"]
         isEditable <- map["isEditable"]
     }
 }

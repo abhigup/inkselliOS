@@ -13,14 +13,17 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     
     var items: [PostSummaryEntity] = []
-    var tableViewCellIdentifier:String = ""
+    var tableViewCellIdentifier:[String] = []
     
     func initTableController(){}
     
     override func initController() {
         initTableController()
-        tableView.registerNib(UINib(nibName: tableViewCellIdentifier, bundle: nil), forCellReuseIdentifier: tableViewCellIdentifier)
-
+        
+        for var i=0; i < tableViewCellIdentifier.count; i++
+        {
+            tableView.registerNib(UINib(nibName: tableViewCellIdentifier[i], bundle: nil), forCellReuseIdentifier: tableViewCellIdentifier[i])
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,8 +32,12 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     
     func setTableCell(indexPath:NSIndexPath, cell: UITableViewCell){}
     
+    func getTableCell(indexPath : NSIndexPath) -> UITableViewCell{
+        return tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[0], forIndexPath: indexPath)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier, forIndexPath: indexPath)
+        let cell = getTableCell(indexPath)
         
         setTableCell(indexPath, cell: cell)
         return cell

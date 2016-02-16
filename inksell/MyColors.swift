@@ -37,6 +37,20 @@ extension UIColor{
         return nil
     }
     
+    static func randomColor() -> UIColor {
+        let r = CGFloat.random()
+        let g = CGFloat.random()
+        let b = CGFloat.random()
+        
+        // If you wanted a random alpha, just create another
+        // random number for that too.
+        return UIColor(red: r, green: g, blue: b, alpha: 1.0)
+    }
+    
+func Transparent() -> UIColor{
+        return UIColor(hexString: "#ffffff00")!
+    }
+    
     func TitlePrimaryDark() -> UIColor{
         return UIColor(hexString: "#01579Bff")!
     }

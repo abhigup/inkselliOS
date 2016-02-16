@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  TableViewCellWithoutPic.swift
 //  inksell
 //
 //  Created by Abhinav Gupta on 15/02/16.
@@ -8,9 +8,13 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TableViewCellWithoutPic: UITableViewCell {
 
     @IBOutlet weak var Title: UILabel!
+    @IBOutlet weak var PostedBy: UILabel!
+    @IBOutlet weak var PostedOn: UILabel!
+    @IBOutlet weak var UserImage: UIImageView!
+    @IBOutlet weak var UserImageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

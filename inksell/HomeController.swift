@@ -24,7 +24,7 @@ class HomeController : BaseTableViewController {
     }
     
     override func initTableController() {
-        self.tableViewCellIdentifier = "TableViewCell"
+        self.tableViewCellIdentifier = ["TableViewCellWithPic", "TableViewCellWithoutPic"]
         if(AppData.userData==nil)
         {
             RestClient.get.getUserDetails(AppData.userGuid!, callback: InksellCallback(success: {
@@ -46,8 +46,57 @@ class HomeController : BaseTableViewController {
         }
     }
     
+    override func getTableCell(indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if(self.items[indexPath.row].HasPostTitlePic)
+        {
+            return tableView.dequeueReusableCellWithIdentifier(self.tableViewCellIdentifier[0], forIndexPath: indexPath)
+        }
+        else
+        {
+            return tableView.dequeueReusableCellWithIdentifier(self.tableViewCellIdentifier[1], forIndexPath: indexPath)
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        if(self.items[indexPath.row].HasPostTitlePic)
+        {
+            return 160
+            
+        }
+        else
+        {
+            return 80
+        }
+
+    }
+    
     override func setTableCell(indexPath:NSIndexPath, cell: UITableViewCell) {
-        let tableCell = cell as! TableViewCell
-        tableCell.Title.text = self.items[indexPath.row].Title
+        if(self.items[indexPath.row].HasPostTitlePic)
+        {
+            
+            let tableCell = cell as! TableViewCellWithPic
+            tableCell.TitleImage?.image = nil
+            
+            tableCell.TitleImage.af_setImageWithURL(NSURL(string: self.items[indexPath.row].PostDefaultImage!)!)
+            
+            Utilities.setUserImage(self.items[indexPath.row].PostedBy, userImageUri: self.items[indexPath.row].UserImageUrl, imageView: tableCell.UserImage, imageLabel: tableCell.UserImageLabel)
+            
+            tableCell.Title.text = self.items[indexPath.row].Title
+            tableCell.PostedBy.text = self.items[indexPath.row].PostedBy
+            tableCell.PostedOn.text = Utilities.getRelativeStringDate(self.items[indexPath.row].Postdate!)
+            
+        }
+        else
+        {
+            let tableCell = cell as! TableViewCellWithoutPic
+            
+            tableCell.Title.text = self.items[indexPath.row].Title
+            tableCell.PostedBy.text = self.items[indexPath.row].PostedBy
+            tableCell.PostedOn.text = Utilities.getRelativeStringDate(self.items[indexPath.row].Postdate!)
+            Utilities.setUserImage(self.items[indexPath.row].PostedBy, userImageUri: self.items[indexPath.row].UserImageUrl, imageView: tableCell.UserImage, imageLabel: tableCell.UserImageLabel)
+
+        }
     }
 }

@@ -27,7 +27,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav" translatesAutoresizingMaskIntoConstraints="NO" id="lq7-zQ-Idg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lq7-zQ-Idg">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="FbF-Nr-O6m"/>
@@ -52,6 +52,15 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2N-wj-eKs">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="163" y="63" width="74" height="73"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0039215686269999999" green="0.3411764706" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -61,10 +70,12 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="3.5"/>
                                     </constraint>
                                     <constraint firstItem="R5c-gg-9s9" firstAttribute="centerX" secondItem="RF4-ax-zSV" secondAttribute="centerX" id="Cis-2F-nX6"/>
+                                    <constraint firstItem="f2N-wj-eKs" firstAttribute="centerX" secondItem="lq7-zQ-Idg" secondAttribute="centerX" id="IYw-wb-1Dx"/>
                                     <constraint firstAttribute="height" constant="200" id="Iwk-lF-EUn"/>
                                     <constraint firstItem="i1u-rU-eLL" firstAttribute="top" secondItem="lq7-zQ-Idg" secondAttribute="bottom" constant="24" id="UAz-J2-Vi7">
                                         <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                                     </constraint>
+                                    <constraint firstItem="f2N-wj-eKs" firstAttribute="centerY" secondItem="lq7-zQ-Idg" secondAttribute="centerY" id="aHf-j8-941"/>
                                     <constraint firstItem="lq7-zQ-Idg" firstAttribute="centerX" secondItem="RF4-ax-zSV" secondAttribute="centerX" id="cQh-A8-bn3"/>
                                 </constraints>
                                 <variation key="default">
@@ -72,15 +83,18 @@
                                         <exclude reference="i1u-rU-eLL"/>
                                         <exclude reference="lq7-zQ-Idg"/>
                                         <exclude reference="R5c-gg-9s9"/>
+                                        <exclude reference="f2N-wj-eKs"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Iwk-lF-EUn"/>
-                                        <exclude reference="9Vq-Go-Gqu"/>
-                                        <exclude reference="Cis-2F-nX6"/>
-                                        <exclude reference="3hP-XD-ds1"/>
-                                        <exclude reference="UAz-J2-Vi7"/>
                                         <exclude reference="22m-rc-oap"/>
                                         <exclude reference="cQh-A8-bn3"/>
+                                        <exclude reference="IYw-wb-1Dx"/>
+                                        <exclude reference="aHf-j8-941"/>
+                                        <exclude reference="3hP-XD-ds1"/>
+                                        <exclude reference="UAz-J2-Vi7"/>
+                                        <exclude reference="9Vq-Go-Gqu"/>
+                                        <exclude reference="Cis-2F-nX6"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -88,15 +102,18 @@
                                         <include reference="i1u-rU-eLL"/>
                                         <include reference="lq7-zQ-Idg"/>
                                         <include reference="R5c-gg-9s9"/>
+                                        <include reference="f2N-wj-eKs"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Iwk-lF-EUn"/>
-                                        <include reference="9Vq-Go-Gqu"/>
-                                        <include reference="Cis-2F-nX6"/>
-                                        <include reference="3hP-XD-ds1"/>
-                                        <include reference="UAz-J2-Vi7"/>
                                         <include reference="22m-rc-oap"/>
                                         <include reference="cQh-A8-bn3"/>
+                                        <include reference="IYw-wb-1Dx"/>
+                                        <include reference="aHf-j8-941"/>
+                                        <include reference="3hP-XD-ds1"/>
+                                        <include reference="UAz-J2-Vi7"/>
+                                        <include reference="9Vq-Go-Gqu"/>
+                                        <include reference="Cis-2F-nX6"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -136,6 +153,7 @@
                     <tabBarItem key="tabBarItem" title="My Profile" image="user" selectedImage="user" id="Pkf-hY-bNf"/>
                     <connections>
                         <outlet property="UserImage" destination="lq7-zQ-Idg" id="vBt-G6-tRx"/>
+                        <outlet property="UserImageLabel" destination="i1u-rU-eLL" id="yQb-ad-2wm"/>
                         <outlet property="UserName" destination="i1u-rU-eLL" id="2f7-hi-uoL"/>
                         <outlet property="UserOfficialEmail" destination="R5c-gg-9s9" id="gVW-kR-IgM"/>
                     </connections>
@@ -152,12 +170,6 @@
         <!--Home-->
         <scene sceneID="emM-Sm-COR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1nd-X8-wOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="OcD-87-DcK">
-                    <connections>
-                        <action selector="handleTabSwipe:" destination="JpO-CU-RDN" id="B4i-bX-Sft"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <viewController title="Home" id="JpO-CU-RDN" customClass="HomeController" customModule="inksell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tQv-LP-C7R"/>
@@ -190,10 +202,10 @@
                                 <exclude reference="Nys-co-cdY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="lw4-fn-EaK"/>
                                 <exclude reference="7Qm-Q5-Zlb"/>
                                 <exclude reference="FfP-P6-o84"/>
                                 <exclude reference="wXB-ul-Rvi"/>
-                                <exclude reference="lw4-fn-EaK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -201,10 +213,10 @@
                                 <include reference="Nys-co-cdY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="lw4-fn-EaK"/>
                                 <include reference="7Qm-Q5-Zlb"/>
                                 <include reference="FfP-P6-o84"/>
                                 <include reference="wXB-ul-Rvi"/>
-                                <include reference="lw4-fn-EaK"/>
                             </mask>
                         </variation>
                         <connections>
@@ -227,6 +239,12 @@
                         <outlet property="tableView" destination="Nys-co-cdY" id="gIh-ch-fk9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nd-X8-wOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="OcD-87-DcK">
+                    <connections>
+                        <action selector="handleTabSwipe:" destination="JpO-CU-RDN" id="B4i-bX-Sft"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3202.5" y="-395.25"/>
         </scene>

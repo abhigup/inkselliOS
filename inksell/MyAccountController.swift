@@ -14,6 +14,7 @@ class MyAccountController : BaseViewController {
     @IBOutlet weak var UserImage: UIImageView!
     @IBOutlet weak var UserOfficialEmail: UILabel!
     @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var UserImageLabel: UILabel!
     
     @IBAction func handleTabSwipe(recognizer: UISwipeGestureRecognizer) {
         switch(recognizer.direction)
@@ -45,7 +46,7 @@ class MyAccountController : BaseViewController {
     
     func setUserData()
     {
-        Utilities.setUserImage(AppData.userData!.Username, userImageUri: AppData.userData!.UserImageUrl, imageView: UserImage)
+        Utilities.setUserImage(AppData.userData!.Username, userImageUri: AppData.userData!.UserImageUrl, imageView: UserImage, imageLabel: UserImageLabel)
         UserOfficialEmail.text = AppData.userData!.CorporateEmail
         UserName.text = AppData.userData!.Username
     }
