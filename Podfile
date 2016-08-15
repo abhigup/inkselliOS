@@ -11,7 +11,9 @@ pod 'ObjectMapper', '~> 1.1'
 pod 'AlamofireObjectMapper', '~> 2.1'
 pod 'ActionSheetPicker-3.0', '~> 2.0.4'
 pod 'SCLAlertView'
-pod 'Toast-Swift', '~> 1.0.0'
+pod 'Toast-Swift', '~> 1.3.0'
 pod 'AlamofireImage', '~> 2.0'
+pod 'Material', '~> 1.42'
+pod "KCFloatingActionButton"
 end
 

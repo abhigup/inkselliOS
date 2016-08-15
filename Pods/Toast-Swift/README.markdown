@@ -1,12 +1,13 @@
 Toast-Swift
 =============
 
-[![Build Status](https://travis-ci.org/scalessec/Toast-Swift.svg?branch=1.0.0)](https://travis-ci.org/scalessec/Toast-Swift)
+[![Build Status](https://travis-ci.org/scalessec/Toast-Swift.svg?branch=master)](https://travis-ci.org/scalessec/Toast-Swift)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/Toast-Swift.svg)](http://cocoadocs.org/docsets/Toast-Swift)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Toast-Swift is a Swift extension that adds toast notifications to the `UIView` object class. It is intended to be simple, lightweight, and easy to use. Most toast notifications can be triggered with a single line of code.
 
-**Toast-Swift is a native Swift port of [Toast for iOS](https://github.com/scalessec/Toast "Toast for iOS").** 
+**Toast-Swift is a native Swift port of [Toast for iOS](https://github.com/scalessec/Toast "Toast for iOS").**
 
 Screenshots
 ---------
@@ -30,7 +31,7 @@ self.view.makeToast("This is a piece of toast", duration: 2.0, position: CGPoint
         print("completion without tap")
     }
 }
-                
+
 // display toast with an activity spinner
 self.view.makeToastActivity(.Center)
 
@@ -42,7 +43,7 @@ But wait, there's more!
 ---------
 ```swift
 // create a new style
-var style = ToastStyle()
+let style = ToastStyle()
 
 // this is just one of many style options
 style.messageColor = UIColor.blueColor()
@@ -60,24 +61,47 @@ ToastManager.shared.tapToDismissEnabled = true
 // toggle queueing behavior
 ToastManager.shared.queueEnabled = true
 ```
-    
+
 See the demo project for more examples.
 
 
 Setup Instructions
 ------------------
-Install with [CocoaPods](http://cocoapods.org) by adding the following to your Podfile:
+
+[CocoaPods](http://cocoapods.org)
+------------------
+
+To integrate Toast-Swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ``` ruby
 platform :ios, '8.0'
-pod 'Toast-Swift', '~> 1.0.0'
+pod 'Toast-Swift', '~> 1.3.0'
 ```
 
-or add manually: 
+and in your code add `import Toast_Swift`.
+
+[Carthage](https://github.com/Carthage/Carthage)
+------------------
+
+To integrate Toast-Swift into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "scalessec/Toast-Swift" ~> 1.3.0
+```
+
+Run `carthage update` to build the framework and drag the built `ToastSwiftFramework.framework` into your Xcode project.
+
+and in your code add `import ToastSwiftFramework`.
+
+Manually
+------------------
 
 1. Add `Toast.swift` to your project.
 2. Link against QuartzCore.
 
+Compatibility
+------------------
+Version `1.1.0` and later requires Swift 2.2 and Xcode 7.3. `1.0.0` can be used with Swift 2.1 and earlier versions of Xcode.
 
 MIT License
 -----------

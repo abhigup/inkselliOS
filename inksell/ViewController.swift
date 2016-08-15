@@ -18,8 +18,8 @@ class ViewController: BaseViewController {
         switch(sender)
         {
         case RegisterBtn:
-            self.NavigateToStoryBoard("Home", identifier: "Home", anyObject: "hello")
-            //self.NavigateTo("NavToRegister")
+            //self.NavigateToStoryBoard("Home", identifier: "Home")
+            self.NavigateTo("NavToRegister")
             break
         case VerifyBtn:
             self.NavigateTo("NavToVerify")
@@ -34,7 +34,13 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let userData: UserEntity? = PersistentStorage.sharedInstance.getData(StorageConstants.UserData)
+        if(userData != nil)
+        {
+            AppData.userData = userData
+            AppData.userGuid = userData?.UserGuid
+            self.NavigateToStoryBoard(ScreenName.HomeStoryboard, identifier: ScreenName.HomeScreen, withBackButton: false)
+        }
 //        var auto = RestClient.get.getAutomobile("937572ea-a459-41a9-ab64-7d4bb3cfb5cf", postId: 71249) { (automobileEntity : AutomobileEntity) -> () in
 //            var aut = automobileEntity
         //}

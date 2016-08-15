@@ -16,15 +16,15 @@ class VerifyViewController: BaseViewController {
     var isAlreadyRegistered:Bool?
     
     override func initController() {
-        if(self.passedObject == nil)
+        let IsAlreadyRegisteredPassedValue = self.passedObject
+        if(IsAlreadyRegisteredPassedValue == nil)
         {
             isAlreadyRegistered = PersistentStorage.sharedInstance.getData(StorageConstants.IsAlreadyRegistered)
         }
         else
         {
-            isAlreadyRegistered = (self.passedObject as! Bool)   
+            isAlreadyRegistered = (IsAlreadyRegisteredPassedValue as! Bool)   
         }
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func VerifyUser(sender: AnyObject) {
@@ -43,7 +43,7 @@ class VerifyViewController: BaseViewController {
                 let responseStatus = ResponseStatus(rawValue: responseCode!)
                 if(responseStatus == .UserSuccessfullyVerified)
                 {
-                    self.NavigateToStoryBoard("Home", identifier: "Home", anyObject: "hello")
+                    self.NavigateToStoryBoard(ScreenName.HomeStoryboard, identifier: ScreenName.HomeScreen, withBackButton: false)
                 }
             }))
     }

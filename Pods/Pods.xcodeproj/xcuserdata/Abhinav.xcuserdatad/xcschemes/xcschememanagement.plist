@@ -24,6 +24,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KCFloatingActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Material-io.cosmicmind.material.icons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Material.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +72,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>04693735BCFA74B873DE04047ECC5FBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>08C670F14C5E0F92D52B4FD40051294F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B006392A6DC63E06AC81DE6F08803B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,22 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B7D00F1E08F9A50F9A8F422DD1116B0</key>
+		<key>59C5734CBDBC16DD52556632EF13C40B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62FF78059103A4903197446D2D10D3F1</key>
+		<key>93DF4CE5A4F525F7E1251ACE9F652115</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>849218271BB0D9284E6A334B418B1E8F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>85801C4F7A9671F8F44A7C8B95956787</key>
+		<key>BF42700E88A587E7F16732FFAD89EC4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0EBD43A4FF03AA9F3E0547BB86BB76B</key>
+		<key>D8C5D777866FAA91CEB23102F4313781</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3986200521EC6281E47C8BA5FEA55C4</key>
+		<key>E22C6E3A174FE4AEA7EA29BF15F315E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD2BBB13E0A12B4843A78B38574EF8CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
