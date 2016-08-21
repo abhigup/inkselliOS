@@ -32,17 +32,22 @@ class BaseViewController : UIViewController {
         self.navigationController?.pushViewController(viewController, animated: false)
     }
     
-    func NavigateToStoryBoard(storyBoard:String, identifier: String, withBackButton: Bool)
+    func NavigateToStoryBoard(storyBoard:String, identifier: String)
     {
-        NavigateToStoryBoard(storyBoard, identifier: identifier, anyObject: [], withBackButton: withBackButton)
+        NavigateToStoryBoard(storyBoard, identifier: identifier, anyObject: [])
     }
     
-    func NavigateToStoryBoard(storyBoard:String, identifier: String, anyObject:AnyObject, withBackButton: Bool)
+    func NavigateToStoryBoard(storyBoard:String, identifier: String, anyObject:AnyObject)
     {
         let storyboard = UIStoryboard(name: storyBoard, bundle: anyObject as? NSBundle)
         let vc = storyboard.instantiateViewControllerWithIdentifier(identifier)
         AppData.passedObject = anyObject
         presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func GetViewFromXib<T:UIView>(xibName: String) -> T {
+        let view = NSBundle.mainBundle().loadNibNamed(xibName, owner: self, options: nil).first as? UIView
+        return view as! T
     }
     
     func initController(){}

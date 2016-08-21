@@ -43,7 +43,7 @@ class VerifyViewController: BaseViewController {
                 let responseStatus = ResponseStatus(rawValue: responseCode!)
                 if(responseStatus == .UserSuccessfullyVerified)
                 {
-                    self.NavigateToStoryBoard(ScreenName.HomeStoryboard, identifier: ScreenName.HomeScreen, withBackButton: false)
+                    self.NavigateToStoryBoard(ScreenName.HomeTab, identifier: ScreenName.HomeTab)
                 }
             }))
     }

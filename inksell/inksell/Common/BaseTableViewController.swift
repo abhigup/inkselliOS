@@ -12,7 +12,7 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [PostSummaryEntity] = []
+    var items: [AnyObject] = []
     var tableViewCellIdentifier:[String] = []
     
     func initTableController(){}

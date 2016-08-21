@@ -9,6 +9,8 @@
 import Foundation
 
 struct ScreenName {
-    static let HomeStoryboard = "Home"
-    static let HomeScreen = "Home"
+    static let HomeTab = "Home"
+    
+    static let PostsViewNavController = "PostsView"
+    static let PostsAddNavController = "PostsAdd"
 }

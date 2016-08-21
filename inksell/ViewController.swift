@@ -39,7 +39,7 @@ class ViewController: BaseViewController {
         {
             AppData.userData = userData
             AppData.userGuid = userData?.UserGuid
-            self.NavigateToStoryBoard(ScreenName.HomeStoryboard, identifier: ScreenName.HomeScreen, withBackButton: false)
+            self.NavigateToStoryBoard(ScreenName.HomeTab, identifier: ScreenName.HomeTab)
         }
 //        var auto = RestClient.get.getAutomobile("937572ea-a459-41a9-ab64-7d4bb3cfb5cf", postId: 71249) { (automobileEntity : AutomobileEntity) -> () in
 //            var aut = automobileEntity

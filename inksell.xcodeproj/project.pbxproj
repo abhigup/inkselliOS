@@ -12,6 +12,17 @@
 		AD167B871C8C406A00495D59 /* BasePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD167B861C8C406A00495D59 /* BasePostsViewController.swift */; };
 		AD167B891C8C408100495D59 /* BasePostsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD167B881C8C408100495D59 /* BasePostsAddViewController.swift */; };
 		AD167B8B1C8C418200495D59 /* ElectronicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD167B8A1C8C418200495D59 /* ElectronicsViewController.swift */; };
+		AD1D09271D659DA800B72F3E /* VerticalScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09261D659DA800B72F3E /* VerticalScreenLayout.swift */; };
+		AD1D092F1D659FC900B72F3E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D092E1D659FC900B72F3E /* ContactsView.swift */; };
+		AD1D09311D65A0A700B72F3E /* AddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */; };
+		AD1D093B1D69604800B72F3E /* AddPostsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */; };
+		AD1D093F1D69677100B72F3E /* PostsAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */; };
+		AD1D09411D696B0800B72F3E /* ContactsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1D09401D696B0800B72F3E /* ContactsView.xib */; };
+		AD1D09431D696F5D00B72F3E /* TableSpacingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1D09421D696F5D00B72F3E /* TableSpacingView.xib */; };
+		AD1D09451D6975E100B72F3E /* CommonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1D09441D6975E100B72F3E /* CommonView.xib */; };
+		AD1D09471D6975F300B72F3E /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09461D6975F300B72F3E /* CommonView.swift */; };
+		AD1D09491D69761500B72F3E /* ImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1D09481D69761500B72F3E /* ImagesView.xib */; };
+		AD1D094B1D69762300B72F3E /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D094A1D69762300B72F3E /* ImagesView.swift */; };
 		AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D01C424BA50015BBD3 /* CategoryType.swift */; };
 		AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D21C424C640015BBD3 /* PlatformType.swift */; };
 		AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D51C424CB00015BBD3 /* RestClient.swift */; };
@@ -36,8 +47,11 @@
 		AD9D42AD1C50CD1C00D21EC5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9D42AC1C50CD1C00D21EC5 /* BaseViewController.swift */; };
 		AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */; };
 		AD9E39891D5F0ADD00D8D557 /* ScreenName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E39881D5F0ADD00D8D557 /* ScreenName.swift */; };
-		AD9E39901D611F4900D8D557 /* PostsAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E398F1D611F4900D8D557 /* PostsAdd.storyboard */; };
 		ADB7EBEF1C9D5BF400A9C68C /* PostsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB7EBEE1C9D5BF400A9C68C /* PostsView.storyboard */; };
+		ADBFF66C1D69A5D400323667 /* CustomMaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF66B1D69A5D400323667 /* CustomMaterialTextField.swift */; };
+		ADBFF66F1D69A78300323667 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF66E1D69A78300323667 /* PlaceholderTextView.swift */; };
+		ADBFF6711D69AF8400323667 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF6701D69AF8400323667 /* BaseTableViewCell.swift */; };
+		ADBFF6731D69C95C00323667 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF6721D69C95C00323667 /* HomeTableViewController.swift */; };
 		ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0D61C42700600CFCCD2 /* CompanyEntity.swift */; };
 		ADD8D0D91C427B8A00CFCCD2 /* GetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */; };
 		ADD8D0DB1C428AE500CFCCD2 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */; };
@@ -77,6 +91,17 @@
 		AD167B861C8C406A00495D59 /* BasePostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasePostsViewController.swift; path = inksell/inksell/Posts/View/BasePostsViewController.swift; sourceTree = SOURCE_ROOT; };
 		AD167B881C8C408100495D59 /* BasePostsAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePostsAddViewController.swift; sourceTree = "<group>"; };
 		AD167B8A1C8C418200495D59 /* ElectronicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectronicsViewController.swift; sourceTree = "<group>"; };
+		AD1D09261D659DA800B72F3E /* VerticalScreenLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScreenLayout.swift; sourceTree = "<group>"; };
+		AD1D092E1D659FC900B72F3E /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewProtocol.swift; sourceTree = "<group>"; };
+		AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostsViewType.swift; sourceTree = "<group>"; };
+		AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostsAdd.storyboard; sourceTree = "<group>"; };
+		AD1D09401D696B0800B72F3E /* ContactsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView.xib; sourceTree = "<group>"; };
+		AD1D09421D696F5D00B72F3E /* TableSpacingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableSpacingView.xib; sourceTree = "<group>"; };
+		AD1D09441D6975E100B72F3E /* CommonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonView.xib; sourceTree = "<group>"; };
+		AD1D09461D6975F300B72F3E /* CommonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		AD1D09481D69761500B72F3E /* ImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesView.xib; sourceTree = "<group>"; };
+		AD1D094A1D69762300B72F3E /* ImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
 		AD2244D01C424BA50015BBD3 /* CategoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryType.swift; path = inksell/Enums/CategoryType.swift; sourceTree = SOURCE_ROOT; };
 		AD2244D21C424C640015BBD3 /* PlatformType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformType.swift; path = inksell/Enums/PlatformType.swift; sourceTree = SOURCE_ROOT; };
 		AD2244D51C424CB00015BBD3 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClient.swift; path = inksell/Services/RestClient.swift; sourceTree = SOURCE_ROOT; };
@@ -103,8 +128,11 @@
 		AD9D42AC1C50CD1C00D21EC5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = inksell/inksell/Common/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
 		AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigurationManager.swift; path = inksell/Utils/ConfigurationManager.swift; sourceTree = SOURCE_ROOT; };
 		AD9E39881D5F0ADD00D8D557 /* ScreenName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenName.swift; path = inksell/Constants/ScreenName.swift; sourceTree = SOURCE_ROOT; };
-		AD9E398F1D611F4900D8D557 /* PostsAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PostsAdd.storyboard; path = inksell/inksell/Posts/Add/PostsAdd.storyboard; sourceTree = SOURCE_ROOT; };
 		ADB7EBEE1C9D5BF400A9C68C /* PostsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PostsView.storyboard; path = inksell/inksell/Posts/View/PostsView.storyboard; sourceTree = SOURCE_ROOT; };
+		ADBFF66B1D69A5D400323667 /* CustomMaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomMaterialTextField.swift; path = inksell/Utils/CustomControls/CustomMaterialTextField.swift; sourceTree = SOURCE_ROOT; };
+		ADBFF66E1D69A78300323667 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		ADBFF6701D69AF8400323667 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		ADBFF6721D69C95C00323667 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		ADD8D0D61C42700600CFCCD2 /* CompanyEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompanyEntity.swift; path = inksell/Models/CompanyEntity.swift; sourceTree = SOURCE_ROOT; };
 		ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetServices.swift; path = inksell/Services/GetServices.swift; sourceTree = SOURCE_ROOT; };
 		ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostServices.swift; path = inksell/Services/PostServices.swift; sourceTree = SOURCE_ROOT; };
@@ -169,8 +197,16 @@
 		AD167B841C8C3FA800495D59 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */,
 				AD167B881C8C408100495D59 /* BasePostsAddViewController.swift */,
-				AD9E398F1D611F4900D8D557 /* PostsAdd.storyboard */,
+				AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */,
+				AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */,
+				AD1D09401D696B0800B72F3E /* ContactsView.xib */,
+				AD1D092E1D659FC900B72F3E /* ContactsView.swift */,
+				AD1D09441D6975E100B72F3E /* CommonView.xib */,
+				AD1D09461D6975F300B72F3E /* CommonView.swift */,
+				AD1D09481D69761500B72F3E /* ImagesView.xib */,
+				AD1D094A1D69762300B72F3E /* ImagesView.swift */,
 			);
 			name = Add;
 			path = inksell/inksell/Posts/Add;
@@ -314,6 +350,9 @@
 				ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */,
 				ADDD797F1C72B1B70045200E /* TableViewCellWithoutPic.swift */,
 				ADDD79801C72B1B70045200E /* TableViewCellWithoutPic.xib */,
+				AD1D09261D659DA800B72F3E /* VerticalScreenLayout.swift */,
+				AD1D09421D696F5D00B72F3E /* TableSpacingView.xib */,
+				ADBFF6701D69AF8400323667 /* BaseTableViewCell.swift */,
 			);
 			name = common;
 			path = inksell/inksell/Common;
@@ -323,9 +362,20 @@
 			isa = PBXGroup;
 			children = (
 				ADDD796D1C71C3180045200E /* HomeController.swift */,
+				ADBFF6721D69C95C00323667 /* HomeTableViewController.swift */,
 			);
 			name = Home;
 			path = inksell/inksell/Home/Home;
+			sourceTree = SOURCE_ROOT;
+		};
+		ADBFF66D1D69A74900323667 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFF66B1D69A5D400323667 /* CustomMaterialTextField.swift */,
+				ADBFF66E1D69A78300323667 /* PlaceholderTextView.swift */,
+			);
+			name = CustomControls;
+			path = inksell/Utils/CustomControls;
 			sourceTree = SOURCE_ROOT;
 		};
 		ADD8D0D51C426FD700CFCCD2 /* Models */ = {
@@ -352,6 +402,7 @@
 		ADD8D0DE1C4398F500CFCCD2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ADBFF66D1D69A74900323667 /* CustomControls */,
 				ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */,
 				AD9D42A91C50CC6C00D21EC5 /* Utilities.swift */,
 				AD9D42AE1C50D27D00D21EC5 /* ConfigurationManager.swift */,
@@ -458,11 +509,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1D09411D696B0800B72F3E /* ContactsView.xib in Resources */,
 				AD9630F31BDBF48F00ADC405 /* LaunchScreen.storyboard in Resources */,
+				AD1D09451D6975E100B72F3E /* CommonView.xib in Resources */,
 				ADDD797C1C71D4960045200E /* TableViewCellWithPic.xib in Resources */,
+				AD1D093F1D69677100B72F3E /* PostsAdd.storyboard in Resources */,
 				AD9630F01BDBF48F00ADC405 /* Assets.xcassets in Resources */,
+				AD1D09431D696F5D00B72F3E /* TableSpacingView.xib in Resources */,
 				AD9630EE1BDBF48F00ADC405 /* Login.storyboard in Resources */,
-				AD9E39901D611F4900D8D557 /* PostsAdd.storyboard in Resources */,
+				AD1D09491D69761500B72F3E /* ImagesView.xib in Resources */,
 				ADF6C4091C5A1A9600F3D7D7 /* Home.storyboard in Resources */,
 				ADDD79821C72B1B70045200E /* TableViewCellWithoutPic.xib in Resources */,
 				ADB7EBEF1C9D5BF400A9C68C /* PostsView.storyboard in Resources */,
@@ -537,24 +592,31 @@
 				ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */,
 				AD023AEC1C57AFAA00283305 /* CallbackProtocol.swift in Sources */,
 				ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */,
+				AD1D09271D659DA800B72F3E /* VerticalScreenLayout.swift in Sources */,
 				AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */,
 				AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */,
 				AD9E39891D5F0ADD00D8D557 /* ScreenName.swift in Sources */,
 				AD9631031BDD06B100ADC405 /* RegisterViewController.swift in Sources */,
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
 				ADF6C4291C65FEDF00F3D7D7 /* HomeTabController.swift in Sources */,
+				AD1D09311D65A0A700B72F3E /* AddViewProtocol.swift in Sources */,
 				AD9631051BDD06D700ADC405 /* VerifyViewController.swift in Sources */,
 				AD9630EB1BDBF48F00ADC405 /* ViewController.swift in Sources */,
+				AD1D09471D6975F300B72F3E /* CommonView.swift in Sources */,
 				ADEFF8331C4F507500185A40 /* ElectronicEntity.swift in Sources */,
 				ADEFF8411C4F576700185A40 /* UserEntity.swift in Sources */,
 				AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */,
 				AD4D99CF1C54414C0011C31E /* MyColors.swift in Sources */,
+				ADBFF6711D69AF8400323667 /* BaseTableViewCell.swift in Sources */,
 				AD4D99D81C5578540011C31E /* Toasts.swift in Sources */,
 				ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */,
 				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
 				AD8A2AEF1C6606F500953065 /* MyAccountController.swift in Sources */,
+				AD1D093B1D69604800B72F3E /* AddPostsViewType.swift in Sources */,
+				AD1D092F1D659FC900B72F3E /* ContactsView.swift in Sources */,
 				AD167B871C8C406A00495D59 /* BasePostsViewController.swift in Sources */,
 				ADD8D0E01C43993A00CFCCD2 /* PersistentStorage.swift in Sources */,
+				ADBFF6731D69C95C00323667 /* HomeTableViewController.swift in Sources */,
 				AD2244D11C424BA50015BBD3 /* CategoryType.swift in Sources */,
 				AD9D42AA1C50CC6C00D21EC5 /* Utilities.swift in Sources */,
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
@@ -562,6 +624,7 @@
 				ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,
 				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,
+				ADBFF66C1D69A5D400323667 /* CustomMaterialTextField.swift in Sources */,
 				ADDD797E1C71D9FB0045200E /* BaseTableViewController.swift in Sources */,
 				AD4D99D31C54DCDB0011C31E /* Extentions.swift in Sources */,
 				ADEFF83D1C4F557B00185A40 /* PostIdWithCategory.swift in Sources */,
@@ -572,6 +635,8 @@
 				AD9631071BDD072600ADC405 /* AlreadyViewController.swift in Sources */,
 				ADEFF83F1C4F55ED00185A40 /* PostSummaryEntity.swift in Sources */,
 				ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */,
+				ADBFF66F1D69A78300323667 /* PlaceholderTextView.swift in Sources */,
+				AD1D094B1D69762300B72F3E /* ImagesView.swift in Sources */,
 				AD4D99DA1C557CED0011C31E /* StorageConstants.swift in Sources */,
 				AD167B8B1C8C418200495D59 /* ElectronicsViewController.swift in Sources */,
 				ADEFF8351C4F509200185A40 /* FurnitureEntity.swift in Sources */,

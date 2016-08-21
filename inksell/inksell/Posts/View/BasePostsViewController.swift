@@ -15,6 +15,7 @@ class BasePostsViewController : BaseViewController {
     @IBOutlet weak var PostImages: UIImageView!
     @IBOutlet weak var PostTitle: UILabel!
     @IBOutlet weak var PostDate: UILabel!
+    
     @IBAction func goBack(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
