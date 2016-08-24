@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class CompanyEntity : Mappable{
+public class CompanyEntity : Mappable{
     
     var CompanyId:Int?
     var CompanyName:String?
     var CompanyDomain:String?
     
-    required init?(_ map: Map) {
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         CompanyId <- map["companyId"]
         CompanyName <- map["companyName"]
         CompanyDomain <- map["companyDomain"]

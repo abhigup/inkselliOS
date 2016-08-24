@@ -173,7 +173,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0IW-yU-18l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QX8-tc-Xxt">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-us-zUP">
@@ -420,7 +420,12 @@
         <scene sceneID="Gul-US-qbe">
             <objects>
                 <viewController id="EXt-S4-tv2" customClass="HomeTableController" customModule="inksell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KVP-lT-nCB"/>
+                        <viewControllerLayoutGuide type="bottom" id="INi-Sk-z1i"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xMh-9z-JEq">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-4J-Vru">

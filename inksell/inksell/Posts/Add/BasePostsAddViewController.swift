@@ -12,18 +12,45 @@ import Material
 
 class BasePostsAddViewController: BaseTableViewController {
     
+    var categoryType: CategoryType = CategoryType.AllCategory
+    
     @IBAction func goBack(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    override func initTableController() {
-        self.tableViewCellIdentifier = [AddPostsViewType.CommonView.rawValue, AddPostsViewType.ImagesView.rawValue, AddPostsViewType.ContactsView.rawValue]
-        self.items = [AddPostsViewType.CommonView.rawValue, AddPostsViewType.ImagesView.rawValue, AddPostsViewType.ContactsView.rawValue]
+    @IBAction func submitPost(sender: AnyObject) {
+        var postEntity : IPostEntity? = nil
+        
+        let contactsView = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as! ContactsView
+        switch categoryType {
+        case .Automobile:
+            postEntity = AutomobileEntity()
+            contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)
+            break
+        case .Electronics:
+            postEntity = ElectronicEntity()
+            contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)
+            break
+        case .Furniture:
+            postEntity = FurnitureEntity()
+            contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)
+            break
+        case .Others:
+            postEntity = OtherEntity()
+            contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)
+            break
+        case .RealEstate:
+            postEntity = RealEstateEntity()
+            contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)
+            break
+        default:
+            AlertController.alert("Not Supported Catefory")
+        }
     }
     
-    override func getTableCell(indexPath: NSIndexPath) -> UITableViewCell {
-        let viewType = self.items[indexPath.row] as! String
-        return tableView.dequeueReusableCellWithIdentifier(viewType, forIndexPath: indexPath)
+    override func initTableController() {
+        categoryType = CategoryType(rawValue:AppData.passedObject as! Int)!
+        self.tableViewCellIdentifier = [AddPostsViewType.CommonView.rawValue, AddPostsViewType.ImagesView.rawValue, AddPostsViewType.ContactsView.rawValue]
+        self.items = [AddPostsViewType.CommonView.rawValue, AddPostsViewType.ImagesView.rawValue, AddPostsViewType.ContactsView.rawValue]
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat

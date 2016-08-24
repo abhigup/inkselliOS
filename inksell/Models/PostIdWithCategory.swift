@@ -9,16 +9,16 @@
 import Foundation
 import ObjectMapper
 
-class PostIdWithCategory : Mappable {
+public class PostIdWithCategory : Mappable {
     var categoryId:Int?
     var postId:Int?
     var postTitle:String?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         categoryId <- map["categoryId"]
         postId <- map["postId"]
         postTitle <- map["postTitle"]

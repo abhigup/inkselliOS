@@ -33,7 +33,7 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     func setTableCell(indexPath:NSIndexPath, cell: UITableViewCell){}
     
     func getTableCell(indexPath : NSIndexPath) -> UITableViewCell{
-        return tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[0], forIndexPath: indexPath)
+        return tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[indexPath.row], forIndexPath: indexPath)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

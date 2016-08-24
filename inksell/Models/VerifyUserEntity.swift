@@ -9,18 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class VerifyUserEntity : Mappable {
+public class VerifyUserEntity : Mappable {
     var Username:String?
     var CompanyId:Int?
     var CorporateEmail:String?
     var LocationId:Int?
     var userGuid:String?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         Username <- map["Username"]
         CompanyId <- map["CopmanyId"]
         CorporateEmail <- map["CorporateEmail"]

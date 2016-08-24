@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class ContactAdressEntity :Mappable{
+public class ContactAdressEntity :Mappable{
     var Adress:String?
     var AdressId:Int?
     var City:String?
@@ -17,11 +17,11 @@ class ContactAdressEntity :Mappable{
     var ContactNumber:String?
     var ContactName:String?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
+
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         Adress <- map["Adress"]
         AdressId <- map["AdressId"]
         City <- map["City"]

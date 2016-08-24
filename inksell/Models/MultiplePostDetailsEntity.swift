@@ -9,18 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class MultiplePostDetailsEntity : Mappable{
+public class MultiplePostDetailsEntity : Mappable{
     
     var userGuid:String?
     var postTitle:String?
     var associatedPostList:String?
     var IsVisibleToAll:Bool?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         userGuid <- map["userGuid"]
         postTitle <- map["postTitle"]
         associatedPostList <- map["associatedPostList"]

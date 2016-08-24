@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol IAddViewProtocol {
+    func verifyAndGetData(postEntity : IPostEntity, postCategory : CategoryType) -> Bool
+}

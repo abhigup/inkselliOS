@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class FurnitureEntity: Mappable{
+public class FurnitureEntity: Mappable, IPostEntity{
     var LastModifiedDate:NSDate?
     var PostId:Int?
     var PostDescription:String?
@@ -27,11 +27,11 @@ class FurnitureEntity: Mappable{
     var UserPeriod:String?
     var ContactAddress:ContactAdressEntity?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         LastModifiedDate <- (map["LastModifiedDate"], DateTimeTransform())
         PostId <- map["PostId"]
         PostDescription <- map["companyDomain"]

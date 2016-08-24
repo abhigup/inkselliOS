@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -215,20 +216,9 @@
                                 <exclude reference="jFl-on-diB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4uN-H3-sgD"/>
-                                <exclude reference="Jao-FK-T6i"/>
-                                <exclude reference="Otj-0V-MHY"/>
-                                <exclude reference="X6k-Hx-GLN"/>
-                                <exclude reference="gsX-0B-g8R"/>
-                                <exclude reference="sk1-FR-jrP"/>
                                 <exclude reference="C5W-D3-kvX"/>
                                 <exclude reference="Vp6-Yg-N8u"/>
                                 <exclude reference="Yhx-SE-gIp"/>
-                                <exclude reference="3xi-am-jgK"/>
-                                <exclude reference="KIG-8g-vXw"/>
-                                <exclude reference="SJD-8v-36J"/>
-                                <exclude reference="i6l-y0-WO1"/>
-                                <exclude reference="nMm-qd-ztp"/>
                                 <exclude reference="FEY-3L-OaA"/>
                                 <exclude reference="aDn-GA-5Jh"/>
                                 <exclude reference="xwL-ie-HBu"/>
@@ -246,6 +236,17 @@
                                 <exclude reference="zOP-2d-8kT"/>
                                 <exclude reference="rWz-TW-a75"/>
                                 <exclude reference="te0-vh-OGf"/>
+                                <exclude reference="4uN-H3-sgD"/>
+                                <exclude reference="Jao-FK-T6i"/>
+                                <exclude reference="Otj-0V-MHY"/>
+                                <exclude reference="X6k-Hx-GLN"/>
+                                <exclude reference="gsX-0B-g8R"/>
+                                <exclude reference="sk1-FR-jrP"/>
+                                <exclude reference="3xi-am-jgK"/>
+                                <exclude reference="KIG-8g-vXw"/>
+                                <exclude reference="SJD-8v-36J"/>
+                                <exclude reference="i6l-y0-WO1"/>
+                                <exclude reference="nMm-qd-ztp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -262,20 +263,9 @@
                                 <include reference="jFl-on-diB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4uN-H3-sgD"/>
-                                <include reference="Jao-FK-T6i"/>
-                                <include reference="Otj-0V-MHY"/>
-                                <include reference="X6k-Hx-GLN"/>
-                                <include reference="gsX-0B-g8R"/>
-                                <include reference="sk1-FR-jrP"/>
                                 <include reference="C5W-D3-kvX"/>
                                 <include reference="Vp6-Yg-N8u"/>
                                 <include reference="Yhx-SE-gIp"/>
-                                <include reference="3xi-am-jgK"/>
-                                <include reference="KIG-8g-vXw"/>
-                                <include reference="SJD-8v-36J"/>
-                                <include reference="i6l-y0-WO1"/>
-                                <include reference="nMm-qd-ztp"/>
                                 <include reference="FEY-3L-OaA"/>
                                 <include reference="aDn-GA-5Jh"/>
                                 <include reference="xwL-ie-HBu"/>
@@ -293,6 +283,17 @@
                                 <include reference="zOP-2d-8kT"/>
                                 <include reference="rWz-TW-a75"/>
                                 <include reference="te0-vh-OGf"/>
+                                <include reference="4uN-H3-sgD"/>
+                                <include reference="Jao-FK-T6i"/>
+                                <include reference="Otj-0V-MHY"/>
+                                <include reference="X6k-Hx-GLN"/>
+                                <include reference="gsX-0B-g8R"/>
+                                <include reference="sk1-FR-jrP"/>
+                                <include reference="3xi-am-jgK"/>
+                                <include reference="KIG-8g-vXw"/>
+                                <include reference="SJD-8v-36J"/>
+                                <include reference="i6l-y0-WO1"/>
+                                <include reference="nMm-qd-ztp"/>
                             </mask>
                         </variation>
                     </view>
@@ -333,7 +334,7 @@
                 <outlet property="ContactCity" destination="tI4-l0-Sg0" id="lQN-E2-GZ0"/>
                 <outlet property="ContactEmail" destination="bFt-MZ-Nde" id="FgS-q2-HDl"/>
                 <outlet property="ContactNumber" destination="TSQ-1o-E9P" id="WTI-xq-dzw"/>
-                <outlet property="ContactPerson" destination="4j7-zb-mQX" id="ZKN-zC-zKh"/>
+                <outlet property="ContactPerson" destination="4j7-zb-mQX" id="jxs-bi-FQV"/>
                 <outlet property="UseMyInfoSwitch" destination="B6d-s8-JFd" id="lGA-gB-Gpb"/>
                 <outlet property="UserImageLabel" destination="jFl-on-diB" id="pts-zg-6Pz"/>
                 <outlet property="UserImageView" destination="F53-8u-qcn" id="jW6-Kp-wQR"/>

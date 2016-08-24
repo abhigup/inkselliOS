@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class PostSummaryEntity : Mappable {
+public class PostSummaryEntity : Mappable {
     var CompanyId:Int?
     var IsSoldOut:Bool?
     var IsVisibleToAll:Bool?
@@ -30,11 +30,11 @@ class PostSummaryEntity : Mappable {
     
     var isEditable:Bool?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         CompanyId <- map["CompanyId"]
         IsSoldOut <- map["IsSoldOut"]
         IsVisibleToAll <- map["IsVisibleToAll"]

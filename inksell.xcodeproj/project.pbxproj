@@ -14,7 +14,7 @@
 		AD167B8B1C8C418200495D59 /* ElectronicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD167B8A1C8C418200495D59 /* ElectronicsViewController.swift */; };
 		AD1D09271D659DA800B72F3E /* VerticalScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09261D659DA800B72F3E /* VerticalScreenLayout.swift */; };
 		AD1D092F1D659FC900B72F3E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D092E1D659FC900B72F3E /* ContactsView.swift */; };
-		AD1D09311D65A0A700B72F3E /* AddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */; };
+		AD1D09311D65A0A700B72F3E /* IAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D09301D65A0A700B72F3E /* IAddViewProtocol.swift */; };
 		AD1D093B1D69604800B72F3E /* AddPostsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */; };
 		AD1D093F1D69677100B72F3E /* PostsAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */; };
 		AD1D09411D696B0800B72F3E /* ContactsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1D09401D696B0800B72F3E /* ContactsView.xib */; };
@@ -65,6 +65,7 @@
 		ADDD797E1C71D9FB0045200E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */; };
 		ADDD79811C72B1B70045200E /* TableViewCellWithoutPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD797F1C72B1B70045200E /* TableViewCellWithoutPic.swift */; };
 		ADDD79821C72B1B70045200E /* TableViewCellWithoutPic.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDD79801C72B1B70045200E /* TableViewCellWithoutPic.xib */; };
+		ADE2E2221D6D8DC000442AF7 /* IPostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2E2211D6D8DC000442AF7 /* IPostEntity.swift */; };
 		ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */; };
 		ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */; };
 		ADEA90BB1C44DC84009C5E71 /* AutomobileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */; };
@@ -93,7 +94,7 @@
 		AD167B8A1C8C418200495D59 /* ElectronicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectronicsViewController.swift; sourceTree = "<group>"; };
 		AD1D09261D659DA800B72F3E /* VerticalScreenLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScreenLayout.swift; sourceTree = "<group>"; };
 		AD1D092E1D659FC900B72F3E /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
-		AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewProtocol.swift; sourceTree = "<group>"; };
+		AD1D09301D65A0A700B72F3E /* IAddViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAddViewProtocol.swift; sourceTree = "<group>"; };
 		AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostsViewType.swift; sourceTree = "<group>"; };
 		AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostsAdd.storyboard; sourceTree = "<group>"; };
 		AD1D09401D696B0800B72F3E /* ContactsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView.xib; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = inksell/inksell/Common/BaseTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		ADDD797F1C72B1B70045200E /* TableViewCellWithoutPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellWithoutPic.swift; path = inksell/inksell/Common/TableViewCellWithoutPic.swift; sourceTree = SOURCE_ROOT; };
 		ADDD79801C72B1B70045200E /* TableViewCellWithoutPic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellWithoutPic.xib; path = inksell/inksell/Common/TableViewCellWithoutPic.xib; sourceTree = SOURCE_ROOT; };
+		ADE2E2211D6D8DC000442AF7 /* IPostEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPostEntity.swift; sourceTree = "<group>"; };
 		ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseStatus.swift; path = inksell/Enums/ResponseStatus.swift; sourceTree = SOURCE_ROOT; };
 		ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FurnishingType.swift; path = inksell/Enums/FurnishingType.swift; sourceTree = SOURCE_ROOT; };
 		ADEA90BA1C44DC84009C5E71 /* AutomobileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutomobileEntity.swift; path = inksell/Models/AutomobileEntity.swift; sourceTree = SOURCE_ROOT; };
@@ -199,7 +201,7 @@
 			children = (
 				AD1D093E1D69677100B72F3E /* PostsAdd.storyboard */,
 				AD167B881C8C408100495D59 /* BasePostsAddViewController.swift */,
-				AD1D09301D65A0A700B72F3E /* AddViewProtocol.swift */,
+				AD1D09301D65A0A700B72F3E /* IAddViewProtocol.swift */,
 				AD1D093A1D69604800B72F3E /* AddPostsViewType.swift */,
 				AD1D09401D696B0800B72F3E /* ContactsView.xib */,
 				AD1D092E1D659FC900B72F3E /* ContactsView.swift */,
@@ -394,6 +396,7 @@
 				ADEFF83E1C4F55ED00185A40 /* PostSummaryEntity.swift */,
 				ADEFF8401C4F576700185A40 /* UserEntity.swift */,
 				ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */,
+				ADE2E2211D6D8DC000442AF7 /* IPostEntity.swift */,
 			);
 			name = Models;
 			path = inksell/Models;
@@ -595,11 +598,12 @@
 				AD1D09271D659DA800B72F3E /* VerticalScreenLayout.swift in Sources */,
 				AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */,
 				AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */,
+				ADE2E2221D6D8DC000442AF7 /* IPostEntity.swift in Sources */,
 				AD9E39891D5F0ADD00D8D557 /* ScreenName.swift in Sources */,
 				AD9631031BDD06B100ADC405 /* RegisterViewController.swift in Sources */,
 				AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */,
 				ADF6C4291C65FEDF00F3D7D7 /* HomeTabController.swift in Sources */,
-				AD1D09311D65A0A700B72F3E /* AddViewProtocol.swift in Sources */,
+				AD1D09311D65A0A700B72F3E /* IAddViewProtocol.swift in Sources */,
 				AD9631051BDD06D700ADC405 /* VerifyViewController.swift in Sources */,
 				AD9630EB1BDBF48F00ADC405 /* ViewController.swift in Sources */,
 				AD1D09471D6975F300B72F3E /* CommonView.swift in Sources */,

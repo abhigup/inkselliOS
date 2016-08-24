@@ -9,18 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class LocationEntity: Mappable
+public class LocationEntity: Mappable
 {
     var LocationId: Int?
     var LocationName: String?
     var CountryName: String?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
-        LocationId <- map["locationId"]
+    
+    public func mapping(map: Map) {        LocationId <- map["locationId"]
         LocationName <- map["locationName"]
         CountryName <- map["countryName"]
     }

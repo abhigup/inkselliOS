@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class UserEntity : Mappable {
+public class UserEntity : Mappable {
     var UserGuid:String?
     var Username:String?
     var PersonalEmail:String?
@@ -20,10 +20,12 @@ class UserEntity : Mappable {
     var City:String?
     var PhoneNumber:String?
     var UserImageUrl:String?
-    init() {}
-    required convenience init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
+    
+    
+    public func mapping(map: Map) {
         UserGuid <- map["UserGuid"]
         Username <- map["Username"]
         PersonalEmail <- map["PersonalEmail"]

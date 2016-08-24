@@ -57,10 +57,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dEk-li-qd9">
-                        <barButtonItem key="leftBarButtonItem" image="home" id="Rxs-1K-1S0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rxs-1K-1S0">
                             <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goBack:" destination="6JA-VM-uDy" id="kdJ-yq-0uh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="BOT-0W-aB1">
+                            <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="submitPost:" destination="6JA-VM-uDy" id="8Cm-yT-ed6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -92,7 +98,4 @@
             <point key="canvasLocation" x="648" y="230.25"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="home" width="25" height="25"/>
-    </resources>
 </document>

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class RealEstateEntity: Mappable{
+public class RealEstateEntity: Mappable, IPostEntity{
     var LastModifiedDate:NSDate?
     var PostId:Int?
     var UserGuid:String?
@@ -38,11 +38,11 @@ class RealEstateEntity: Mappable{
     var IsSoldOut:Bool?
     var IsVisibleToAll:Bool?
     
-    required init?(_ map: Map) {
-        
-    }
+    init() {}
+    required convenience public init?(_ map: Map) { self.init() }
     
-    func mapping(map: Map) {
+    
+    public func mapping(map: Map) {
         LastModifiedDate <- (map["LastModifiedDate"], DateTimeTransform())
         PostId <- map["PostId"]
         UserGuid <- map["UserGuid"]
