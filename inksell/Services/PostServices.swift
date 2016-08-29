@@ -11,8 +11,28 @@ import ObjectMapper
 
 public class PostServices{
     
-    func getCompanies(body: CompanyEntity?, completionHandler: (CompanyEntity) -> ())
+    func addOthersPost(body: OtherEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
     {
-        //RestClient.postObject("hello", body: body, completionHandler: completionHandler)
+        RestClient.postString("addOtherPost/\(isMultiple)", body: body, callback: completionHandler)
+    }
+    
+    func addAutomobilePost(body: AutomobileEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    {
+        RestClient.postString("addAutomobilePost/\(isMultiple)", body: body, callback: completionHandler)
+    }
+    
+    func addFurniturePost(body: FurnitureEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    {
+        RestClient.postString("addFurniturePost/\(isMultiple)", body: body, callback: completionHandler)
+    }
+    
+    func addElectronicsPost(body: ElectronicEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    {
+        RestClient.postString("addElectronicsPost/\(isMultiple)", body: body, callback: completionHandler)
+    }
+    
+    func createUpdateUserData(completionHandler: InksellCallback<String>)
+    {
+        RestClient.postString("createUsers", body: AppData.userData!, callback: completionHandler)
     }
 }

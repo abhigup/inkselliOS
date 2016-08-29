@@ -9,9 +9,9 @@
 import Foundation
 
 enum  AddPostsViewType :String {
-    case CommonView = "CommonView",
-    RealEstateView = "RealEstateView",
-    ImagesView = "ImagesView",
-    MapView = "MapView",
-    ContactsView = "ContactsView"
+    case CommonAddCell = "CommonAddCell",
+    RealEstateAddCell = "RealEstateAddCell",
+    ImagesAddCell = "ImagesAddCell",
+    MapAddCell = "MapAddCell",
+    ContactsAddCell = "ContactsAddCell"
 }

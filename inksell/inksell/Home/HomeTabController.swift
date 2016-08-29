@@ -23,18 +23,4 @@ class HomeTabController: UITabBarController {
         default: break
         }
     }
-   
-    override func viewDidLoad() {
-        if(AppData.userData==nil)
-        {
-            RestClient.get.getUserDetails(AppData.userGuid!, callback: InksellCallback(success: {
-                (userEntity: UserEntity?) -> () in
-                AppData.userData = userEntity!
-                PersistentStorage.sharedInstance.saveData(StorageConstants.UserData, object: AppData.userData!)
-                }
-                , failure: { (ResponseStatus) -> () in
-                    
-            }))
-        }
-    }
 }

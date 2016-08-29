@@ -11,7 +11,7 @@ import ObjectMapper
 
 public class ContactAdressEntity :Mappable{
     var Adress:String?
-    var AdressId:Int?
+    var AdressId:Int? = 0
     var City:String?
     var ContactEmail:String?
     var ContactNumber:String?
@@ -22,8 +22,8 @@ public class ContactAdressEntity :Mappable{
 
     
     public func mapping(map: Map) {
-        Adress <- map["Adress"]
-        AdressId <- map["AdressId"]
+        Adress <- map["Address"]
+        AdressId <- map["AddressId"]
         City <- map["City"]
         ContactEmail <- map["ContactEmail"]
         ContactNumber <- map["ContactNumber"]

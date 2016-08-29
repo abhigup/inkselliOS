@@ -15,8 +15,8 @@ class BaseViewController : UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
             let viewController = segue.destinationViewController as! BaseViewController;
             viewController.passedObject = sender
-        }
-        
+    }
+    
     func NavigateTo(identifier: String)
     {
         self.performSegueWithIdentifier(identifier, sender: nil)
@@ -57,8 +57,23 @@ class BaseViewController : UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor().TitlePrimaryDark()
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        initAppData()
         initController()
         super.viewDidLoad()
+    }
+    
+    func initAppData() {
+        if(AppData.userData==nil)
+        {
+            RestClient.get.getUserDetails(InksellCallback(success: {
+                userEntity in
+                AppData.userData = userEntity
+                PersistentStorage.sharedInstance.saveData(StorageConstants.UserData, object: AppData.userData)
+                }
+                , failure: { (ResponseStatus) -> () in
+                    
+            }))
+        }
     }
 
 }

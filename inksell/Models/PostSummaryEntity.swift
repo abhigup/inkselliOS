@@ -14,7 +14,7 @@ public class PostSummaryEntity : Mappable {
     var IsSoldOut:Bool?
     var IsVisibleToAll:Bool?
     var LocationId:Int?
-    var postId:Int?
+    var PostId:Int?
     var Postdate:NSDate?
     var PostedBy:String?
     var Title:String?
@@ -39,7 +39,7 @@ public class PostSummaryEntity : Mappable {
         IsSoldOut <- map["IsSoldOut"]
         IsVisibleToAll <- map["IsVisibleToAll"]
         LocationId <- map["LocationId"]
-        postId <- map["postId"]
+        PostId <- map["PostId"]
         Postdate <- (map["Postdate"], DateTimeTransform())
         PostedBy <- map["PostedBy"]
         Title <- map["Title"]

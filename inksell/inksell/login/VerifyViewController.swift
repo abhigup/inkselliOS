@@ -39,7 +39,7 @@ class VerifyViewController: BaseViewController {
             view.makeToast(message: "Verification code cannot be empty")
         }
         
-        RestClient.get.verifyUser(AppData.userGuid!, code: code.text!, isAlreadyRegistered: isAlreadyRegistered!, callback: InksellCallback<Int>(success: { responseCode in
+        RestClient.get.verifyUser(code.text!, isAlreadyRegistered: isAlreadyRegistered!, callback: InksellCallback<Int>(success: { responseCode in
                 let responseStatus = ResponseStatus(rawValue: responseCode!)
                 if(responseStatus == .UserSuccessfullyVerified)
                 {

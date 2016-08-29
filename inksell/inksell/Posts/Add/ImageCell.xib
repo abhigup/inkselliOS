@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="Ynm-DL-W66" customClass="ImageCell" customModule="inksell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhR-iP-HZh">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP5-Zt-SKw">
+                        <rect key="frame" x="69" y="0.0" width="31" height="24"/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal" title="-">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteImage:" destination="Ynm-DL-W66" eventType="touchUpInside" id="1uQ-NG-gP3"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IP5-Zt-SKw" secondAttribute="trailing" id="Fvb-lp-zII"/>
+                <constraint firstItem="dhR-iP-HZh" firstAttribute="top" secondItem="IP5-Zt-SKw" secondAttribute="top" id="J5C-Sw-z1p"/>
+                <constraint firstItem="dhR-iP-HZh" firstAttribute="trailing" secondItem="IP5-Zt-SKw" secondAttribute="trailing" id="L5i-jF-oHK"/>
+                <constraint firstAttribute="bottom" secondItem="IP5-Zt-SKw" secondAttribute="bottom" constant="76" id="YYV-8d-NOZ"/>
+                <constraint firstItem="IP5-Zt-SKw" firstAttribute="leading" secondItem="Ynm-DL-W66" secondAttribute="leading" constant="69" id="ci1-P9-Y28"/>
+                <constraint firstAttribute="bottom" secondItem="dhR-iP-HZh" secondAttribute="bottom" id="kHN-sd-xL9"/>
+                <constraint firstItem="dhR-iP-HZh" firstAttribute="top" secondItem="Ynm-DL-W66" secondAttribute="top" id="mBO-FF-TQL"/>
+                <constraint firstItem="dhR-iP-HZh" firstAttribute="leading" secondItem="Ynm-DL-W66" secondAttribute="leading" id="qzW-aR-Wp1"/>
+            </constraints>
+            <size key="customSize" width="78" height="56"/>
+            <connections>
+                <outlet property="Image" destination="dhR-iP-HZh" id="eAh-0p-E3Z"/>
+            </connections>
+            <point key="canvasLocation" x="284" y="250"/>
+        </collectionViewCell>
+    </objects>
+</document>

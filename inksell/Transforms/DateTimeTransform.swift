@@ -23,6 +23,10 @@ public class DateTimeTransform: TransformType {
     }
     
     public func transformToJSON(value: NSDate?) -> String? {
+        if(value == nil)
+        {
+            return nil
+        }
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeZone = NSTimeZone(name: "UTC")
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"

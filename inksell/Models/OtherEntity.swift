@@ -11,7 +11,7 @@ import ObjectMapper
 
 public class OtherEntity: Mappable, IPostEntity{
     var LastModifiedDate:NSDate?
-    var PostId:Int?
+    var PostId:Int? = 0
     var PostDescription:String?
     var PostTitle:String?
     var PostedBy:String?
@@ -20,11 +20,11 @@ public class OtherEntity: Mappable, IPostEntity{
     var UserOfficialEmail:String?
     var ActualPrice:String?
     var ExpectedPrice:String?
-    var IsSoldOut:Bool?
-    var IsVisibleToAll:Bool?
+    var IsSoldOut:Bool? = false
+    var IsVisibleToAll:Bool? = false
     var MakeBrand:String?
-    var PostImagesUrl:[String]?
-    var UserPeriod:String?
+    var PostImagesUrl:[String]? = []
+    var UsedPeriod:String?
     var ContactAddress:ContactAdressEntity?
     
     init() {}
@@ -34,7 +34,7 @@ public class OtherEntity: Mappable, IPostEntity{
     public func mapping(map: Map) {
         LastModifiedDate <- (map["LastModifiedDate"], DateTimeTransform())
         PostId <- map["PostId"]
-        PostDescription <- map["companyDomain"]
+        PostDescription <- map["PostDescription"]
         PostTitle <- map["PostTitle"]
         PostedBy <- map["PostedBy"]
         UserGuid <- map["UserGuid"]
@@ -46,7 +46,7 @@ public class OtherEntity: Mappable, IPostEntity{
         IsVisibleToAll <- map["IsVisibleToAll"]
         MakeBrand <- map["MakeBrand"]
         PostImagesUrl <- map["PostImagesUrl"]
-        UserPeriod <- map["UserPeriod"]
+        UsedPeriod <- map["UsedPeriod"]
         ContactAddress <- map["ContactAddress"]
     }
 }

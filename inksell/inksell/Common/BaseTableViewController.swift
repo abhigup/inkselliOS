@@ -16,8 +16,9 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     var tableViewCellIdentifier:[String] = []
     
     func initTableController(){}
+    func didSelectAtIndexPath(indexPath:NSIndexPath){}
     
-    override func initController() {
+    override final func initController() {
         initTableController()
         
         for i in 0 ..< tableViewCellIdentifier.count
@@ -33,7 +34,7 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     func setTableCell(indexPath:NSIndexPath, cell: UITableViewCell){}
     
     func getTableCell(indexPath : NSIndexPath) -> UITableViewCell{
-        return tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[indexPath.row], forIndexPath: indexPath)
+        return tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[0], forIndexPath: indexPath)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -49,6 +50,7 @@ class BaseTableViewController : BaseViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        didSelectAtIndexPath(indexPath)
     }
 }

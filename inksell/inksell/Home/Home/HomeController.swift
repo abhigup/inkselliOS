@@ -9,13 +9,17 @@
 import UIKit
 import KCFloatingActionButton
 
-class HomeController : BaseViewController {
+class HomeController : BaseViewController, UIPopoverPresentationControllerDelegate, FilterToHomeProtocol {
 
-    
     @IBOutlet weak var TableContainerView: UIView!
-    @IBOutlet weak var Filter: UIBarButtonItem!
     @IBOutlet weak var Search: UIBarButtonItem!
+    var filteredCategoryType  = CategoryType.AllCategory
+    var tabelViewController : HomeTableViewController?
     
+    @IBAction func openFilterPopover(sender: AnyObject) {
+        NavigateTo("NavToPopoverFilter", anyObject: filteredCategoryType.rawValue)
+    }
+        
     @IBAction func handleTabSwipe(recognizer: UISwipeGestureRecognizer) {
         switch(recognizer.direction)
         {
@@ -34,12 +38,12 @@ class HomeController : BaseViewController {
         let fab = KCFloatingActionButton()
         fab.buttonColor = UIColor().pink()
         fab.plusColor = UIColor.whiteColor()
-        fab.addItem("Multiple Items", icon: UIImage(named: "multiple")!, handler: { _ in self.navigateToNewPost(CategoryType.Multiple)})
-        fab.addItem("Other", icon: UIImage(named: "other")!, handler: { _ in self.navigateToNewPost(CategoryType.Others)})
-        fab.addItem("Automobile", icon: UIImage(named: "auto")!, handler: { _ in self.navigateToNewPost(CategoryType.Automobile)})
-        fab.addItem("Electronics", icon: UIImage(named: "electronics")!, handler: { _ in self.navigateToNewPost(CategoryType.Electronics)})
-        fab.addItem("Real Estate", icon: UIImage(named: "realestate")!, handler: { _ in self.navigateToNewPost(CategoryType.RealEstate)})
-        fab.addItem("Furniture", icon: UIImage(named: "furniture")!, handler: { _ in self.navigateToNewPost(CategoryType.Furniture)})
+        fab.addItem(CategoryType.Multiple.getString(), icon: CategoryType.Multiple.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.Multiple)})
+        fab.addItem(CategoryType.Others.getString(), icon: CategoryType.Others.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.Others)})
+        fab.addItem(CategoryType.Automobile.getString(), icon: CategoryType.Automobile.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.Automobile)})
+        fab.addItem(CategoryType.Electronics.getString(), icon: CategoryType.Electronics.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.Electronics)})
+        fab.addItem(CategoryType.RealEstate.getString(), icon: CategoryType.RealEstate.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.RealEstate)})
+        fab.addItem(CategoryType.Furniture.getString(), icon: CategoryType.Furniture.getIcon(), handler: { _ in self.navigateToNewPost(CategoryType.Furniture)})
         TableContainerView.addSubview(fab)
         
     }
@@ -47,6 +51,32 @@ class HomeController : BaseViewController {
     func navigateToNewPost(category: CategoryType)
     {
         self.NavigateToStoryBoard(ScreenName.PostsAddNavController, identifier: ScreenName.PostsAddNavController, anyObject: category.rawValue)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
+    func updateTable(categoryType:CategoryType){
+        filteredCategoryType = categoryType
+        tabelViewController?.filterTableForCategoryType(categoryType)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let viewController = segue.destinationViewController as! BaseViewController;
+        if(segue.identifier == "NavToHomeTable")
+        {
+            tabelViewController = (viewController as! HomeTableViewController)
+        }
+        
+        if segue.identifier == "NavToPopoverFilter" {
+            let filterViewController = viewController as! FilterPopoverController
+            filterViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            filterViewController.popoverPresentationController!.delegate = self
+            filterViewController.preferredContentSize = CGSize(width: 200, height: 260)
+            filterViewController.homeDelegate = self
+        }
+        viewController.passedObject = sender
     }
 
     

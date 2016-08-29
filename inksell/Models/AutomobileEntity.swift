@@ -24,7 +24,7 @@ public class AutomobileEntity: Mappable, IPostEntity{
     var IsVisibleToAll:Bool?
     var MakeBrand:String?
     var PostImagesUrl:[String]?
-    var UserPeriod:String?
+    var UsedPeriod:String?
     var ContactAddress:ContactAdressEntity?
     
     init() {}
@@ -34,7 +34,7 @@ public class AutomobileEntity: Mappable, IPostEntity{
     public func mapping(map: Map) {
         LastModifiedDate <- (map["LastModifiedDate"], DateTimeTransform())
         PostId <- map["PostId"]
-        PostDescription <- map["companyDomain"]
+        PostDescription <- map["PostDescription"]
         PostTitle <- map["PostTitle"]
         PostedBy <- map["PostedBy"]
         UserGuid <- map["UserGuid"]
@@ -46,7 +46,7 @@ public class AutomobileEntity: Mappable, IPostEntity{
         IsVisibleToAll <- map["IsVisibleToAll"]
         MakeBrand <- map["MakeBrand"]
         PostImagesUrl <- map["PostImagesUrl"]
-        UserPeriod <- map["UserPeriod"]
+        UsedPeriod <- map["UsedPeriod"]
         ContactAddress <- map["ContactAddress"]
     }
 }

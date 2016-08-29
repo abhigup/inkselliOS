@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AA4C9904E91038D238392853'
+               BlueprintIdentifier = 'CBD4BA41DEE26C8488F2EB9E'
                BlueprintName = 'Pods-inksell'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_inksell.framework'>

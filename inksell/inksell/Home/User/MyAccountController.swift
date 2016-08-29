@@ -8,13 +8,15 @@
 
 import UIKit
 import AlamofireImage
+import KCFloatingActionButton
 
-class MyAccountController : BaseViewController {
+class MyAccountController : BasePostSummaryTableViewController, KCFloatingActionButtonDelegate {
     
     @IBOutlet weak var UserImage: UIImageView!
     @IBOutlet weak var UserOfficialEmail: UILabel!
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var UserImageLabel: UILabel!
+    @IBOutlet weak var HeaderView: UIView!
     
     @IBAction func handleTabSwipe(recognizer: UISwipeGestureRecognizer) {
         switch(recognizer.direction)
@@ -26,22 +28,26 @@ class MyAccountController : BaseViewController {
         }
     }
     
-    override func initController() {
-        if(AppData.userData==nil)
-        {
-            RestClient.get.getUserDetails(AppData.userGuid!, callback: InksellCallback(success: {
-                userEntity in
-                AppData.userData = userEntity
-                self.setUserData()
-                }
-                , failure: { (ResponseStatus) -> () in
-                    
-            }))
-        }
-        else
-        {
-            setUserData()
-        }
+    override func initSummaryController() {
+        setUserData()
+        RestClient.get.getMyPostSummary(InksellCallback(success: {
+            PostSummaryEntities in
+            self.setPostsSummaryEntities(PostSummaryEntities!)
+            }
+            , failure: { (ResponseStatus) -> () in
+                
+        }))
+        let fabButton = KCFloatingActionButton()
+        fabButton.buttonColor = UIColor().pink()
+        let image = Utilities.resizeImage(UIImage(named: "ic_action_mode_edit")!, targetSize: CGSizeMake(30, 30))
+        fabButton.buttonImage = image
+        fabButton.paddingY = -20
+        fabButton.fabDelegate = self
+        HeaderView.addSubview(fabButton)
+    }
+    
+    func emptyKCFABSelected(fab: KCFloatingActionButton) {
+        NavigateTo("NavToUserInfo")
     }
     
     func setUserData()

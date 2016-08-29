@@ -47,7 +47,7 @@ public class RealEstateEntity: Mappable, IPostEntity{
         PostId <- map["PostId"]
         UserGuid <- map["UserGuid"]
         UserOfficialEmail <- map["UserOfficialEmail"]
-        PostDescription <- map["companyDomain"]
+        PostDescription <- map["PostDescription"]
         PostTitle <- map["PostTitle"]
         PostedBy <- map["PostedBy"]
         ContactAddress <- map["ContactAddress"]

@@ -15,5 +15,6 @@ pod 'Toast-Swift', '~> 1.3.0'
 pod 'AlamofireImage', '~> 2.0'
 pod 'Material', '~> 1.42'
 pod "KCFloatingActionButton"
+pod 'DKImagePickerController'
 end
 

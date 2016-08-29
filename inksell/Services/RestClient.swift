@@ -12,7 +12,7 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class RestClient{
-    static let apiUrl = "http://inksell.cloudapp.net:8080/service1.svc/json/"
+    static let apiUrl = "http://inksell.cloudapp.net:8080/service1.svc/json"
     
     static let get = GetServices()
     static let post = PostServices()
@@ -32,8 +32,8 @@ class RestClient{
         makeArrayCall(Alamofire.Method.GET, section:section, body:nil, callback: callback)
     }
     
-    static func postString<T, U:Mappable>(section: String, body:U?, callback:InksellCallback<T>)    {
-        makeStringCall(Alamofire.Method.POST, section: section, body :Mapper<U>().toJSON(body!), callback: callback)
+    static func postString<T, U:Mappable>(section: String, body:U, callback:InksellCallback<T>)    {
+        makeStringCall(Alamofire.Method.POST, section: section, body :Mapper<U>().toJSON(body), callback: callback)
     }
     
     static func postObject<T:Mappable, U:Mappable>(section: String, body:U?, callback:InksellCallback<T>)

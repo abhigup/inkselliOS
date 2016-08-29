@@ -9,7 +9,7 @@
 import UIKit
 import Material
 
-class ContactsView: BaseTableViewCell, IAddViewProtocol {
+class ContactsAddCell: BaseTableViewCell, IAddViewProtocol {
     
     @IBOutlet weak var UserImageView: UIImageView!
     @IBOutlet weak var UsernameLabel: UILabel!
@@ -22,6 +22,14 @@ class ContactsView: BaseTableViewCell, IAddViewProtocol {
     @IBOutlet weak var UserImageLabel: UILabel!
     
     @IBAction func useMyContactInfo(sender: AnyObject) {
+        if(UseMyInfoSwitch.on)
+        {
+            ContactPerson.text = AppData.userData?.Username
+            ContactNumber.text = AppData.userData?.PhoneNumber
+            ContactEmail.text = AppData.userData?.CorporateEmail
+            ContactAddress.text = AppData.userData?.Address
+            ContactCity.text = AppData.userData?.City
+        }
     }
     
     override func initCell() {
