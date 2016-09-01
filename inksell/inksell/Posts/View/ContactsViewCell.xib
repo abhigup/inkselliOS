@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vUM-gk-A3v" id="iIc-C6-r8u">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="249.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypu-j3-tV5">
@@ -81,14 +81,18 @@
                     <constraint firstItem="Ypu-j3-tV5" firstAttribute="leading" secondItem="X6k-cz-18C" secondAttribute="leading" id="4VQ-8X-uGL"/>
                     <constraint firstItem="Ypu-j3-tV5" firstAttribute="leading" secondItem="iIc-C6-r8u" secondAttribute="leadingMargin" id="5Cs-N2-cwy"/>
                     <constraint firstItem="Qvl-nh-0sl" firstAttribute="top" secondItem="Lv2-KC-rKf" secondAttribute="top" id="9oj-zH-Inq"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="8gI-t0-UlA" secondAttribute="bottom" constant="50.5" id="BJS-ZR-6IX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8gI-t0-UlA" secondAttribute="bottom" constant="50.5" id="BJS-ZR-6IX">
+                        <variation key="heightClass=regular-widthClass=compact" constant="43"/>
+                    </constraint>
                     <constraint firstItem="Ypu-j3-tV5" firstAttribute="leading" secondItem="iIc-C6-r8u" secondAttribute="leadingMargin" id="Bid-Cn-wZU"/>
                     <constraint firstItem="Qvl-nh-0sl" firstAttribute="centerX" secondItem="Lv2-KC-rKf" secondAttribute="centerX" id="DE1-Ii-LO2"/>
                     <constraint firstItem="63i-iV-Laq" firstAttribute="top" secondItem="X6k-cz-18C" secondAttribute="bottom" constant="8" symbolic="YES" id="DlL-Yj-ZWE"/>
                     <constraint firstItem="DM0-78-cxb" firstAttribute="trailing" secondItem="8gI-t0-UlA" secondAttribute="trailing" id="SlN-Kf-hv5"/>
                     <constraint firstItem="DM0-78-cxb" firstAttribute="leading" secondItem="8gI-t0-UlA" secondAttribute="leading" id="V9q-eB-iPm"/>
                     <constraint firstItem="63i-iV-Laq" firstAttribute="top" secondItem="Ypu-j3-tV5" secondAttribute="bottom" constant="25" id="W5h-FM-HoR"/>
-                    <constraint firstItem="Lv2-KC-rKf" firstAttribute="top" secondItem="iIc-C6-r8u" secondAttribute="topMargin" id="Zko-Jf-Rfv"/>
+                    <constraint firstItem="Lv2-KC-rKf" firstAttribute="top" secondItem="iIc-C6-r8u" secondAttribute="topMargin" id="Zko-Jf-Rfv">
+                        <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                    </constraint>
                     <constraint firstItem="X6k-cz-18C" firstAttribute="leading" secondItem="63i-iV-Laq" secondAttribute="leading" id="ZrS-Tt-b17"/>
                     <constraint firstItem="8gI-t0-UlA" firstAttribute="top" secondItem="DM0-78-cxb" secondAttribute="bottom" constant="8" symbolic="YES" id="aaL-BR-sgc"/>
                     <constraint firstItem="63i-iV-Laq" firstAttribute="leading" secondItem="DM0-78-cxb" secondAttribute="leading" id="b05-ZE-Rxg"/>

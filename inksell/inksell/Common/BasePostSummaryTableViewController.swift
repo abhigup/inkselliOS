@@ -59,7 +59,7 @@ class BasePostSummaryTableViewController: BaseTableViewController {
             let tableCell = cell as! TableViewCellWithPic
             
             tableCell.TitleImage?.image = nil
-            
+            let x = indexPath.row
             tableCell.TitleImage.af_setImageWithURL(NSURL(string: self.postSummaryItems[indexPath.row].PostDefaultImage!)!)
             
             Utilities.setUserImage(self.postSummaryItems[indexPath.row].PostedBy, userImageUri: self.postSummaryItems[indexPath.row].UserImageUrl, imageView: tableCell.UserImage, imageLabel: tableCell.UserImageLabel)

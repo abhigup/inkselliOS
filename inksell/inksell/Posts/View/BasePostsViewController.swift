@@ -20,6 +20,8 @@ class BasePostsViewController : BaseTableViewController {
         categoryType = CategoryType(rawValue: (self.postSummaryEntity?.categoryid)!)
         self.tableViewCellIdentifier = [ViewPostsViewType.ImagesHeaderViewCell.rawValue, ViewPostsViewType.CommonViewCell.rawValue, ViewPostsViewType.ContactsViewCell.rawValue]
         self.items = self.tableViewCellIdentifier
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -30,10 +32,11 @@ class BasePostsViewController : BaseTableViewController {
         RestClient.get.getFullPostEntity((self.postSummaryEntity?.PostId)!, categoryType: categoryType!, callback: InksellCallback<IPostEntity>(success:
                 {
                     entity in
-                    for index in 0..<self.items.count
+                    self.postEntity = entity;
+                    let cells = self.tableView.visibleCells
+                    for cell in cells
                     {
-                        let indexPath = NSIndexPath(forRow: index, inSection: 0)
-                        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! BaseViewPostCell
+                        let cell = cell as! BaseViewPostCell
                         cell.initData(self.postSummaryEntity!, postEntity: entity!, viewController: self)
                     }
                 }
@@ -43,21 +46,12 @@ class BasePostsViewController : BaseTableViewController {
     
     override func getTableCell(indexPath : NSIndexPath) -> UITableViewCell{
         let view = tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifier[indexPath.row], forIndexPath: indexPath) as! BaseViewPostCell
-        return view
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-    {
-        let viewType = ViewPostsViewType(rawValue:self.items[indexPath.row] as! String)!
-        switch viewType {
-        case .ImagesHeaderViewCell:
-            return 350
-        case .CommonViewCell:
-            return 300
-        case .ContactsViewCell:
-            return 250
-        default:
-            return 100
+        if(postEntity != nil)
+        {
+            view.initData(self.postSummaryEntity!, postEntity: postEntity!, viewController: self)
         }
+        view.contentView.setNeedsLayout()
+        view.contentView.layoutIfNeeded()
+        return view
     }
 }

@@ -16,5 +16,6 @@ pod 'AlamofireImage', '~> 2.0'
 pod 'Material', '~> 1.42'
 pod "KCFloatingActionButton"
 pod 'DKImagePickerController'
+pod 'AZSClient'
 end
 

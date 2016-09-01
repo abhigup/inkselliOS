@@ -30,20 +30,23 @@ class MyAccountController : BasePostSummaryTableViewController, KCFloatingAction
     
     override func initSummaryController() {
         setUserData()
-        RestClient.get.getMyPostSummary(InksellCallback(success: {
-            PostSummaryEntities in
-            self.setPostsSummaryEntities(PostSummaryEntities!)
-            }
-            , failure: { (ResponseStatus) -> () in
-                
-        }))
         let fabButton = KCFloatingActionButton()
         fabButton.buttonColor = UIColor().pink()
-        let image = Utilities.resizeImage(UIImage(named: "ic_action_mode_edit")!, targetSize: CGSizeMake(30, 30))
+        let image = Utilities.resizeImage(UIImage(named: "edit")!, targetSize: CGSizeMake(30, 30))
         fabButton.buttonImage = image
         fabButton.paddingY = -20
         fabButton.fabDelegate = self
         HeaderView.addSubview(fabButton)
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let entity = self.postSummaryItems[indexPath.row]
+            RestClient.get.deletePost(entity.PostId!, categoryType: CategoryType(rawValue: entity.categoryid!)!, callback: InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.PostDeletedSuccess, onSuccess: {
+                self.setUserData()
+                AlertController.alert("Post Deleted Successfully")
+            }))
+        }
     }
     
     func emptyKCFABSelected(fab: KCFloatingActionButton) {
@@ -55,5 +58,13 @@ class MyAccountController : BasePostSummaryTableViewController, KCFloatingAction
         Utilities.setUserImage(AppData.userData!.Username, userImageUri: AppData.userData!.UserImageUrl, imageView: UserImage, imageLabel: UserImageLabel)
         UserOfficialEmail.text = AppData.userData!.CorporateEmail
         UserName.text = AppData.userData!.Username
+        
+        RestClient.get.getMyPostSummary(InksellCallback(success: {
+            PostSummaryEntities in
+            self.setPostsSummaryEntities(PostSummaryEntities!)
+            }
+            , failure: { (ResponseStatus) -> () in
+                
+        }))
     }
 }

@@ -19,14 +19,6 @@ class BasePostsAddViewController: BaseTableViewController, IImagePickerProtocol 
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    let postsCallback = InksellCallback<String>(success:
-        {
-            responseCode in
-            AlertController.alert("Post Successfully uploaded")
-        }
-        , failure: {responseStatus in
-    })
-    
     func presentImagePickerController(imageView : ImagesAddCell)
     {
         let pickerController = DKImagePickerController()
@@ -89,25 +81,64 @@ class BasePostsAddViewController: BaseTableViewController, IImagePickerProtocol 
         
         if(detailsView.verifyAndGetData(postEntity!, postCategory: categoryType)){
             if(contactsView.verifyAndGetData(postEntity!, postCategory: categoryType)){
-                uploadPost(postEntity!)
+                if(self.images.isEmpty){
+                    uploadPost(postEntity!, postImagesUrls: [])
+                }
+                else if(!uploadImages(postEntity!)){
+                    AlertController.alert("Could not upload Images.")
+                }
             }
         }
     }
+
+    private func uploadImages(postEntity : IPostEntity) -> Bool
+    {
+        var finalImages: [UIImage] = []
+        for image in self.images
+        {
+            image.fetchFullScreenImage(true, completeBlock: {
+                (image, info) in
+                finalImages.append(image!)
+            })
+        }
+        return AzureStorageHelper.UploadPic(finalImages, containerName: "posts", callback: {
+            (isSuccess: Bool, imagesUrls: [String]?) in
+            if(isSuccess){
+                self.uploadPost(postEntity, postImagesUrls: imagesUrls!)
+            }
+        })
+    }
     
-    private func uploadPost(postEntity : IPostEntity)
+    private func uploadPost(postEntity : IPostEntity, postImagesUrls: [String])
     {
         switch categoryType {
         case .Others:
-            RestClient.post.addOthersPost(postEntity as! OtherEntity, isMultiple: 0, completionHandler: postsCallback)
+            let entity = postEntity as! OtherEntity
+            entity.PostImagesUrl = postImagesUrls
+            RestClient.post.addOthersPost(entity, isMultiple: 0, completionHandler: InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.PostAddedSuccess, onSuccess: {
+                AlertController.alert("Post Successfully uploaded")
+            }))
             break
         case .Electronics:
-            RestClient.post.addElectronicsPost(postEntity as! ElectronicEntity, isMultiple: 0, completionHandler: postsCallback)
+            let entity = postEntity as! ElectronicEntity
+            entity.PostImagesUrl = postImagesUrls
+            RestClient.post.addElectronicsPost(entity, isMultiple: 0, completionHandler: InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.PostAddedSuccess, onSuccess: {
+                AlertController.alert("Post Successfully uploaded")
+            }))
             break
         case .Automobile:
-            RestClient.post.addAutomobilePost(postEntity as! AutomobileEntity, isMultiple: 0, completionHandler: postsCallback)
+            let entity = postEntity as! AutomobileEntity
+            entity.PostImagesUrl = postImagesUrls
+            RestClient.post.addAutomobilePost(entity, isMultiple: 0, completionHandler: InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.PostAddedSuccess, onSuccess: {
+                AlertController.alert("Post Successfully uploaded")
+            }))
             break
         case .Furniture:
-            RestClient.post.addFurniturePost(postEntity as! FurnitureEntity, isMultiple: 0, completionHandler: postsCallback)
+            let entity = postEntity as! FurnitureEntity
+            entity.PostImagesUrl = postImagesUrls
+            RestClient.post.addFurniturePost(entity, isMultiple: 0, completionHandler: InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.PostAddedSuccess, onSuccess: {
+                AlertController.alert("Post Successfully uploaded")
+            }))
             break
         default:
             AlertController.alert("Not Supported Category")

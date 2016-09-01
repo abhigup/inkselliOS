@@ -105,4 +105,9 @@ public class GetServices
     {
         RestClient.getArray("GetFilteredPostSummary/\(lastPostId)/\(categoryType.rawValue)/\(AppData.userGuid!)", callback: callback)
     }
+    
+    func deletePost(postId:Int, categoryType: CategoryType, callback:InksellCallback<Int>)
+    {
+        RestClient.getString("DeletePost/\(postId)/\(AppData.userGuid!)/\(categoryType.rawValue)", callback: callback)
+    }
 }

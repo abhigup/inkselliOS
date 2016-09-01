@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AZSClient.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ActionSheetPicker-3.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,17 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0A06C45ABA944870AC7EC55EBD080601</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1B006392A6DC63E06AC81DE6F08803B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<key>33C76A4DEDDF38D522906B13D751EA48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C89C0D33A162C973DE7ED2A53ABB54C</key>
+		<key>3BEDBFBD295873F70DDBE46C7A872FEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,17 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81A7243FFF1D8DD5F7476142B8590942</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9FFE8E5B27282373461DF5C6C5E22277</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BD37F4D97FB56812417684CC6A25E419</key>
+		<key>743B070CA38A27E5B79A8C7BD89BF401</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -138,6 +143,11 @@
 			<true/>
 		</dict>
 		<key>CE0A701D8A271EFE0065667D13272921</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFDC531697E4BB15CFD9E15660F62E88</key>
 		<dict>
 			<key>primary</key>
 			<true/>

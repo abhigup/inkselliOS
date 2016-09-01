@@ -44,5 +44,4 @@ class ImagesAddCell: BaseTableViewCell {
     func reloadData() {
         ImageCollectionView.reloadData()
     }
-    
 }

@@ -11,27 +11,27 @@ import ObjectMapper
 
 public class PostServices{
     
-    func addOthersPost(body: OtherEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    func addOthersPost(body: OtherEntity, isMultiple:Int, completionHandler: InksellCallback<Int>)
     {
         RestClient.postString("addOtherPost/\(isMultiple)", body: body, callback: completionHandler)
     }
     
-    func addAutomobilePost(body: AutomobileEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    func addAutomobilePost(body: AutomobileEntity, isMultiple:Int, completionHandler: InksellCallback<Int>)
     {
         RestClient.postString("addAutomobilePost/\(isMultiple)", body: body, callback: completionHandler)
     }
     
-    func addFurniturePost(body: FurnitureEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    func addFurniturePost(body: FurnitureEntity, isMultiple:Int, completionHandler: InksellCallback<Int>)
     {
         RestClient.postString("addFurniturePost/\(isMultiple)", body: body, callback: completionHandler)
     }
     
-    func addElectronicsPost(body: ElectronicEntity, isMultiple:Int, completionHandler: InksellCallback<String>)
+    func addElectronicsPost(body: ElectronicEntity, isMultiple:Int, completionHandler: InksellCallback<Int>)
     {
         RestClient.postString("addElectronicsPost/\(isMultiple)", body: body, callback: completionHandler)
     }
     
-    func createUpdateUserData(completionHandler: InksellCallback<String>)
+    func createUpdateUserData(completionHandler: InksellCallback<Int>)
     {
         RestClient.postString("createUsers", body: AppData.userData!, callback: completionHandler)
     }

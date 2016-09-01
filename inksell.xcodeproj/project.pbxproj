@@ -26,6 +26,7 @@
 		AD2244D31C424C640015BBD3 /* PlatformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D21C424C640015BBD3 /* PlatformType.swift */; };
 		AD2244D61C424CB00015BBD3 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2244D51C424CB00015BBD3 /* RestClient.swift */; };
 		AD354BF61C57A49D0094B040 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD354BF51C57A49D0094B040 /* AppData.swift */; };
+		AD47623D1D7813150029FEA5 /* AzureStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47623C1D7813150029FEA5 /* AzureStorageHelper.swift */; };
 		AD4D99CF1C54414C0011C31E /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99CE1C54414C0011C31E /* MyColors.swift */; };
 		AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99D01C54DB9D0011C31E /* AlertController.swift */; };
 		AD4D99D31C54DCDB0011C31E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D99D21C54DCDB0011C31E /* Extentions.swift */; };
@@ -41,6 +42,9 @@
 		AD5F0A721D73CA7200E5754F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F0A711D73CA7200E5754F /* LineView.swift */; };
 		AD5F0A741D7426C200E5754F /* ContactsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5F0A731D7426C200E5754F /* ContactsViewCell.xib */; };
 		AD5F0A761D742BBD00E5754F /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F0A751D742BBD00E5754F /* ContactsViewCell.swift */; };
+		AD5F0A781D756CE200E5754F /* FavouritesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F0A771D756CE200E5754F /* FavouritesHelper.swift */; };
+		AD5F0A7C1D75788C00E5754F /* FavouriteEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5F0A7B1D75788C00E5754F /* FavouriteEmptyView.xib */; };
+		AD5F0A7E1D757DB300E5754F /* SubscriptionEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5F0A7D1D757DB300E5754F /* SubscriptionEmptyView.xib */; };
 		AD8238921D70257200DC6E57 /* IImagePickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8238911D70257200DC6E57 /* IImagePickerProtocol.swift */; };
 		AD8238941D70313300DC6E57 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8238931D70313300DC6E57 /* ImageCell.xib */; };
 		AD8238961D7185AB00DC6E57 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8238951D7185AB00DC6E57 /* ImageCell.swift */; };
@@ -123,6 +127,7 @@
 		AD2244D21C424C640015BBD3 /* PlatformType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformType.swift; path = inksell/Enums/PlatformType.swift; sourceTree = SOURCE_ROOT; };
 		AD2244D51C424CB00015BBD3 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClient.swift; path = inksell/Services/RestClient.swift; sourceTree = SOURCE_ROOT; };
 		AD354BF51C57A49D0094B040 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = inksell/Constants/AppData.swift; sourceTree = SOURCE_ROOT; };
+		AD47623C1D7813150029FEA5 /* AzureStorageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureStorageHelper.swift; sourceTree = "<group>"; };
 		AD4D99CE1C54414C0011C31E /* MyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyColors.swift; path = inksell/Extentions/MyColors.swift; sourceTree = SOURCE_ROOT; };
 		AD4D99D01C54DB9D0011C31E /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = inksell/Utils/AlertController.swift; sourceTree = SOURCE_ROOT; };
 		AD4D99D21C54DCDB0011C31E /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extentions.swift; path = inksell/Extentions/Extentions.swift; sourceTree = SOURCE_ROOT; };
@@ -138,6 +143,9 @@
 		AD5F0A711D73CA7200E5754F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		AD5F0A731D7426C200E5754F /* ContactsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewCell.xib; sourceTree = "<group>"; };
 		AD5F0A751D742BBD00E5754F /* ContactsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
+		AD5F0A771D756CE200E5754F /* FavouritesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesHelper.swift; sourceTree = "<group>"; };
+		AD5F0A7B1D75788C00E5754F /* FavouriteEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteEmptyView.xib; sourceTree = "<group>"; };
+		AD5F0A7D1D757DB300E5754F /* SubscriptionEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionEmptyView.xib; sourceTree = "<group>"; };
 		AD8238911D70257200DC6E57 /* IImagePickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IImagePickerProtocol.swift; sourceTree = "<group>"; };
 		AD8238931D70313300DC6E57 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		AD8238951D7185AB00DC6E57 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
@@ -174,8 +182,8 @@
 		ADD8D0DC1C42A2FE00CFCCD2 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationEntity.swift; path = inksell/Models/LocationEntity.swift; sourceTree = SOURCE_ROOT; };
 		ADD8D0DF1C43993A00CFCCD2 /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistentStorage.swift; path = inksell/Utils/PersistentStorage.swift; sourceTree = SOURCE_ROOT; };
 		ADDD796D1C71C3180045200E /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = inksell/inksell/Home/Home/HomeController.swift; sourceTree = SOURCE_ROOT; };
-		ADDD796F1C71C8360045200E /* SubscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionController.swift; path = inksell/inksell/Home/SubscriptionController.swift; sourceTree = SOURCE_ROOT; };
-		ADDD79711C71C8500045200E /* FavouritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesController.swift; path = inksell/inksell/Home/FavouritesController.swift; sourceTree = SOURCE_ROOT; };
+		ADDD796F1C71C8360045200E /* SubscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionController.swift; path = inksell/inksell/Home/Subscription/SubscriptionController.swift; sourceTree = SOURCE_ROOT; };
+		ADDD79711C71C8500045200E /* FavouritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesController.swift; path = inksell/inksell/Home/Favourites/FavouritesController.swift; sourceTree = SOURCE_ROOT; };
 		ADDD79791C71D4960045200E /* TableViewCellWithPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellWithPic.swift; path = inksell/inksell/Common/TableViewCellWithPic.swift; sourceTree = SOURCE_ROOT; };
 		ADDD797A1C71D4960045200E /* TableViewCellWithPic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellWithPic.xib; path = inksell/inksell/Common/TableViewCellWithPic.xib; sourceTree = SOURCE_ROOT; };
 		ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = inksell/inksell/Common/BaseTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -289,6 +297,7 @@
 				ADD8D0D81C427B8A00CFCCD2 /* GetServices.swift */,
 				ADD8D0DA1C428AE500CFCCD2 /* PostServices.swift */,
 				AD023AEB1C57AFAA00283305 /* CallbackProtocol.swift */,
+				AD47623C1D7813150029FEA5 /* AzureStorageHelper.swift */,
 			);
 			name = Services;
 			path = inksell/Services;
@@ -314,6 +323,26 @@
 			);
 			name = Extentions;
 			path = inksell/Extentions;
+			sourceTree = SOURCE_ROOT;
+		};
+		AD5F0A791D7577E500E5754F /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				ADDD79711C71C8500045200E /* FavouritesController.swift */,
+				AD5F0A7B1D75788C00E5754F /* FavouriteEmptyView.xib */,
+			);
+			name = Favourite;
+			path = inksell/inksell/Home/Favourites;
+			sourceTree = SOURCE_ROOT;
+		};
+		AD5F0A7A1D75785500E5754F /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				ADDD796F1C71C8360045200E /* SubscriptionController.swift */,
+				AD5F0A7D1D757DB300E5754F /* SubscriptionEmptyView.xib */,
+			);
+			name = Subscription;
+			path = inksell/inksell/Home/Subscription;
 			sourceTree = SOURCE_ROOT;
 		};
 		AD8A2AED1C6606AE00953065 /* User */ = {
@@ -402,6 +431,7 @@
 				AD1D09421D696F5D00B72F3E /* TableSpacingView.xib */,
 				ADBFF6701D69AF8400323667 /* BaseTableViewCell.swift */,
 				AD8238991D719A6400DC6E57 /* BasePostSummaryTableViewController.swift */,
+				AD5F0A771D756CE200E5754F /* FavouritesHelper.swift */,
 			);
 			name = common;
 			path = inksell/inksell/Common;
@@ -477,12 +507,12 @@
 		ADF6C4071C5A14F700F3D7D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AD5F0A7A1D75785500E5754F /* Subscription */,
+				AD5F0A791D7577E500E5754F /* Favourite */,
 				AD9E398C1D61137D00D8D557 /* Home */,
 				AD8A2AED1C6606AE00953065 /* User */,
 				ADF6C4081C5A1A9600F3D7D7 /* Home.storyboard */,
 				ADF6C4281C65FEDF00F3D7D7 /* HomeTabController.swift */,
-				ADDD796F1C71C8360045200E /* SubscriptionController.swift */,
-				ADDD79711C71C8500045200E /* FavouritesController.swift */,
 			);
 			name = Home;
 			path = inksell/inksell/Home;
@@ -563,7 +593,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5F0A7C1D75788C00E5754F /* FavouriteEmptyView.xib in Resources */,
 				AD5F0A6E1D73C75E00E5754F /* CommonViewCell.xib in Resources */,
+				AD5F0A7E1D757DB300E5754F /* SubscriptionEmptyView.xib in Resources */,
 				AD8238941D70313300DC6E57 /* ImageCell.xib in Resources */,
 				AD1D09411D696B0800B72F3E /* ContactsAddCell.xib in Resources */,
 				AD9630F31BDBF48F00ADC405 /* LaunchScreen.storyboard in Resources */,
@@ -647,6 +679,7 @@
 				AD167B891C8C408100495D59 /* BasePostsAddViewController.swift in Sources */,
 				AD8238981D71865600DC6E57 /* BasePostsAddViewControllerCollectionViewExtention.swift in Sources */,
 				AD5F0A721D73CA7200E5754F /* LineView.swift in Sources */,
+				AD5F0A781D756CE200E5754F /* FavouritesHelper.swift in Sources */,
 				AD354BF61C57A49D0094B040 /* AppData.swift in Sources */,
 				ADEA90BD1C44DE23009C5E71 /* ContactAdressEntity.swift in Sources */,
 				ADDD79721C71C8500045200E /* FavouritesController.swift in Sources */,
@@ -676,6 +709,7 @@
 				AD82389E1D72DAA400DC6E57 /* FilterPopoverController.swift in Sources */,
 				AD4D99D81C5578540011C31E /* Toasts.swift in Sources */,
 				ADD8D0D71C42700600CFCCD2 /* CompanyEntity.swift in Sources */,
+				AD47623D1D7813150029FEA5 /* AzureStorageHelper.swift in Sources */,
 				AD5F0A761D742BBD00E5754F /* ContactsViewCell.swift in Sources */,
 				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
 				AD8A2AEF1C6606F500953065 /* MyAccountController.swift in Sources */,

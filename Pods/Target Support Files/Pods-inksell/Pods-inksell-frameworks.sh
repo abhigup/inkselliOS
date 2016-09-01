@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-inksell/AZSClient.framework"
   install_framework "Pods-inksell/ActionSheetPicker_3_0.framework"
   install_framework "Pods-inksell/Alamofire.framework"
   install_framework "Pods-inksell/AlamofireImage.framework"
@@ -97,6 +98,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-inksell/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-inksell/AZSClient.framework"
   install_framework "Pods-inksell/ActionSheetPicker_3_0.framework"
   install_framework "Pods-inksell/Alamofire.framework"
   install_framework "Pods-inksell/AlamofireImage.framework"

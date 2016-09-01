@@ -34,3 +34,24 @@ class InksellCallback<T>
         
     }
 }
+
+class InksellCallbackHelper
+{
+    static func WithExpectedResponseStatus(responseStatus:ResponseStatus, onSuccess: ()->()) -> InksellCallback<Int>
+    {
+        return InksellCallback<Int>(success:
+            {
+                response in
+                if(ResponseStatus(rawValue: response!) == responseStatus)
+                {
+                    onSuccess()
+                }
+                else
+                {
+                    AlertController.alert("Some Error : \(response)")
+                }
+            }
+            , failure: {responseStatus in
+        })
+    }
+}

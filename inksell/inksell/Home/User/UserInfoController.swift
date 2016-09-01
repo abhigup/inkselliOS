@@ -35,14 +35,10 @@ class UserInfoController: BaseViewController {
         AppData.userData?.Address = Address.text
         AppData.userData?.City = City.text
         
-        RestClient.post.createUpdateUserData(InksellCallback<String>(success:
-            {
-                responseCode in
-                PersistentStorage.sharedInstance.saveData(StorageConstants.UserData, object: AppData.userData!)
-                AlertController.alert("User Info Successfully updated")
-            }
-            , failure: {responseStatus in
-        }));
+        RestClient.post.createUpdateUserData(InksellCallbackHelper.WithExpectedResponseStatus(ResponseStatus.UserAddedSuccess, onSuccess: {
+            PersistentStorage.sharedInstance.saveData(StorageConstants.UserData, object: AppData.userData!)
+            AlertController.alert("User Info Successfully updated")
+        }))
     }
     
     func setUserData()
