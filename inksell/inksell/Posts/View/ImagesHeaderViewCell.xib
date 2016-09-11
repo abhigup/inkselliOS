@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pbf-3P-zsK" id="gAa-bl-9EP">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="im1-mp-FhM">
@@ -21,43 +21,53 @@
                             <constraint firstAttribute="height" constant="250" id="XEP-Oa-T9c"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-cJ-Zd9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="ThX-Rq-djG"/>
+                        </constraints>
+                    </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-pv-Bb5">
-                        <rect key="frame" x="8" y="40" width="25" height="25"/>
+                        <rect key="frame" x="8" y="31" width="25" height="25"/>
                         <state key="normal" image="home"/>
                         <connections>
-                            <action selector="goBack:" destination="Pbf-3P-zsK" eventType="touchUpInside" id="5eu-2t-qb3"/>
+                            <action selector="goBack:" destination="Pbf-3P-zsK" eventType="touchUpInside" id="TVH-2N-uDm"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQA-UL-xWY">
                         <rect key="frame" x="8" y="272" width="304" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 25, 2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ew-4z-wAD">
                         <rect key="frame" x="8" y="300" width="304" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFH-GZ-Qji">
-                        <rect key="frame" x="288" y="40" width="24" height="24"/>
+                        <rect key="frame" x="288" y="31" width="24" height="24"/>
                         <state key="normal" image="fav_off"/>
                         <connections>
-                            <action selector="addToFav:" destination="Pbf-3P-zsK" eventType="touchUpInside" id="n0u-yd-aoh"/>
+                            <action selector="addToFav:" destination="Pbf-3P-zsK" eventType="touchUpInside" id="I1f-NM-k8Y"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="NZn-pv-Bb5" firstAttribute="leading" secondItem="rQA-UL-xWY" secondAttribute="leading" id="1yj-vU-sOI"/>
                     <constraint firstAttribute="bottomMargin" secondItem="6ew-4z-wAD" secondAttribute="bottom" constant="25.5" id="HXb-vg-LKI"/>
-                    <constraint firstItem="NZn-pv-Bb5" firstAttribute="top" secondItem="gAa-bl-9EP" secondAttribute="topMargin" constant="32" id="Hgp-wH-w6o"/>
+                    <constraint firstItem="NZn-pv-Bb5" firstAttribute="top" secondItem="gAa-bl-9EP" secondAttribute="topMargin" constant="23" id="Hgp-wH-w6o"/>
                     <constraint firstItem="TFH-GZ-Qji" firstAttribute="trailing" secondItem="rQA-UL-xWY" secondAttribute="trailing" id="Kiz-Sx-m3l"/>
                     <constraint firstItem="NZn-pv-Bb5" firstAttribute="leading" secondItem="gAa-bl-9EP" secondAttribute="leadingMargin" id="MCr-ji-2wc"/>
+                    <constraint firstItem="Kar-cJ-Zd9" firstAttribute="leading" secondItem="gAa-bl-9EP" secondAttribute="leadingMargin" constant="-8" id="PhT-7j-7oZ"/>
                     <constraint firstItem="rQA-UL-xWY" firstAttribute="top" secondItem="im1-mp-FhM" secondAttribute="bottom" constant="22" id="YLF-28-BuE"/>
                     <constraint firstItem="6ew-4z-wAD" firstAttribute="top" secondItem="im1-mp-FhM" secondAttribute="bottom" constant="50" id="aJY-Do-Erf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Kar-cJ-Zd9" secondAttribute="trailing" constant="-8" id="beG-EL-yO8"/>
                     <constraint firstItem="im1-mp-FhM" firstAttribute="top" secondItem="gAa-bl-9EP" secondAttribute="top" id="bwy-H2-382"/>
                     <constraint firstItem="NZn-pv-Bb5" firstAttribute="top" secondItem="TFH-GZ-Qji" secondAttribute="top" id="c9N-oX-cUg"/>
+                    <constraint firstItem="Kar-cJ-Zd9" firstAttribute="top" secondItem="gAa-bl-9EP" secondAttribute="topMargin" constant="-8" id="dAN-vI-5GD"/>
                     <constraint firstItem="rQA-UL-xWY" firstAttribute="trailing" secondItem="6ew-4z-wAD" secondAttribute="trailing" id="lV2-XU-6Zm"/>
                     <constraint firstItem="im1-mp-FhM" firstAttribute="centerX" secondItem="rQA-UL-xWY" secondAttribute="centerX" id="nPw-TV-7Lw"/>
                     <constraint firstAttribute="trailing" secondItem="im1-mp-FhM" secondAttribute="trailing" id="nzk-F6-78A"/>
@@ -66,12 +76,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="FavButton" destination="TFH-GZ-Qji" id="hdK-at-ix2"/>
-                <outlet property="HeaderImage" destination="im1-mp-FhM" id="ohv-nr-6Pm"/>
-                <outlet property="PostTitle" destination="rQA-UL-xWY" id="z2h-Y8-7YE"/>
-                <outlet property="PostedOn" destination="6ew-4z-wAD" id="7Ez-QV-vha"/>
+                <outlet property="FavButton" destination="TFH-GZ-Qji" id="hKE-mh-J5O"/>
+                <outlet property="HeaderImage" destination="im1-mp-FhM" id="58U-jA-bLs"/>
+                <outlet property="PostTitle" destination="rQA-UL-xWY" id="BHN-3c-5ys"/>
+                <outlet property="PostedOn" destination="6ew-4z-wAD" id="FgO-gF-Lxm"/>
             </connections>
-            <point key="canvasLocation" x="287" y="260.5"/>
+            <point key="canvasLocation" x="287" y="260"/>
         </tableViewCell>
     </objects>
     <resources>

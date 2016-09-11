@@ -14,11 +14,11 @@ class BaseViewPostCell: UITableViewCell {
     var postSummaryEntity : PostSummaryEntity?
     var postEntity : IPostEntity?
     var categoryType : CategoryType?
-    var parentViewControllerDelegate : BaseTableViewController?
+    var parentViewControllerDelegate : BasePostsViewController?
     
     func initCell(){}
     
-    final func initData(postSummary:PostSummaryEntity, postEntity: IPostEntity, viewController: BaseTableViewController) {
+    final func initData(postSummary:PostSummaryEntity, postEntity: IPostEntity, viewController: BasePostsViewController) {
         self.parentViewControllerDelegate = viewController
         self.postSummaryEntity = postSummary
         self.postEntity = postEntity

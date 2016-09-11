@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Base Posts View Controller-->
@@ -25,34 +26,73 @@
                                     <outlet property="delegate" destination="FDM-0f-IuT" id="SHm-k8-cWv"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HmQ-xK-MQf">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28s-Kw-6xi">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25172413789999998" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="email"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCy-NC-dGy">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25172413789999998" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="call"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T60-oC-Hu9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="T60-oC-Hu9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="T60-oC-Hu9"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4eN-kM-Eet" firstAttribute="leading" secondItem="pgK-1g-0JY" secondAttribute="leading" id="3EO-ax-3ig"/>
-                            <constraint firstItem="4eN-kM-Eet" firstAttribute="top" secondItem="pgK-1g-0JY" secondAttribute="top" id="8df-Es-8EZ"/>
-                            <constraint firstAttribute="trailing" secondItem="4eN-kM-Eet" secondAttribute="trailing" id="CaM-ub-YPz"/>
-                            <constraint firstItem="4eN-kM-Eet" firstAttribute="bottom" secondItem="bBe-WL-gp6" secondAttribute="top" id="oUf-Wt-F6U"/>
+                            <constraint firstAttribute="trailing" secondItem="4eN-kM-Eet" secondAttribute="trailing" id="AUN-Xm-iGK"/>
+                            <constraint firstItem="4eN-kM-Eet" firstAttribute="leading" secondItem="pgK-1g-0JY" secondAttribute="leading" id="QCq-CJ-feW"/>
+                            <constraint firstItem="bBe-WL-gp6" firstAttribute="top" secondItem="HmQ-xK-MQf" secondAttribute="bottom" id="TFS-UQ-GEb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HmQ-xK-MQf" secondAttribute="trailing" constant="-20" id="cHI-Y0-f3m"/>
+                            <constraint firstItem="HmQ-xK-MQf" firstAttribute="top" secondItem="4eN-kM-Eet" secondAttribute="bottom" id="gHA-NJ-SHv"/>
+                            <constraint firstItem="4eN-kM-Eet" firstAttribute="leading" secondItem="HmQ-xK-MQf" secondAttribute="leading" id="lwB-qJ-c6y"/>
+                            <constraint firstItem="4eN-kM-Eet" firstAttribute="top" secondItem="pgK-1g-0JY" secondAttribute="top" id="xcZ-gi-ReW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="4eN-kM-Eet"/>
+                                <exclude reference="HmQ-xK-MQf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3EO-ax-3ig"/>
-                                <exclude reference="8df-Es-8EZ"/>
-                                <exclude reference="CaM-ub-YPz"/>
-                                <exclude reference="oUf-Wt-F6U"/>
+                                <exclude reference="AUN-Xm-iGK"/>
+                                <exclude reference="QCq-CJ-feW"/>
+                                <exclude reference="lwB-qJ-c6y"/>
+                                <exclude reference="xcZ-gi-ReW"/>
+                                <exclude reference="cHI-Y0-f3m"/>
+                                <exclude reference="gHA-NJ-SHv"/>
+                                <exclude reference="TFS-UQ-GEb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="4eN-kM-Eet"/>
+                                <include reference="HmQ-xK-MQf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3EO-ax-3ig"/>
-                                <include reference="8df-Es-8EZ"/>
-                                <include reference="CaM-ub-YPz"/>
-                                <include reference="oUf-Wt-F6U"/>
+                                <include reference="AUN-Xm-iGK"/>
+                                <include reference="QCq-CJ-feW"/>
+                                <include reference="lwB-qJ-c6y"/>
+                                <include reference="xcZ-gi-ReW"/>
+                                <include reference="cHI-Y0-f3m"/>
+                                <include reference="gHA-NJ-SHv"/>
+                                <include reference="TFS-UQ-GEb"/>
                             </mask>
                         </variation>
                     </view>
@@ -60,12 +100,18 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Vvs-NA-uOT"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="CallButton" destination="OCy-NC-dGy" id="DT9-AW-a6w"/>
+                        <outlet property="EmailButton" destination="28s-Kw-6xi" id="EuR-fG-veB"/>
                         <outlet property="tableView" destination="4eN-kM-Eet" id="DZR-De-XLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8S-nY-yB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="202.5"/>
+            <point key="canvasLocation" x="1074" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="call" width="24" height="24"/>
+        <image name="email" width="24" height="24"/>
+    </resources>
 </document>

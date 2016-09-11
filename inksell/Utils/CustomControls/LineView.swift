@@ -38,7 +38,7 @@ class LineView: UIView {
     var lineCGColor: CGColorRef?
     
     override func drawRect(rect: CGRect) {
-        let lineYCoordinate = self.bounds.size.height - 5
+        let lineYCoordinate = self.bounds.size.height - 2
         let LineXCoordinate = self.bounds.size.width - 5
         let context = UIGraphicsGetCurrentContext()
         CGContextSetLineWidth(context, lineWidth)

@@ -12,6 +12,7 @@ enum  ViewPostsViewType :String {
     case CommonViewCell = "CommonViewCell",
     RealEstateViewCell = "RealEstateViewCell",
     ImagesHeaderViewCell = "ImagesHeaderViewCell",
+    HeaderViewCell = "HeaderViewCell",
     MapViewCell = "MapViewCell",
     ContactsViewCell = "ContactsViewCell"
 }

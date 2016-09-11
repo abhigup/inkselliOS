@@ -11,6 +11,8 @@ import UIKit
 
 class BasePostsViewController : BaseTableViewController {
     
+    @IBOutlet weak var EmailButton: UIButton!
+    @IBOutlet weak var CallButton: UIButton!
     var postSummaryEntity : PostSummaryEntity?
     var postEntity : IPostEntity?
     var categoryType : CategoryType?
@@ -18,7 +20,20 @@ class BasePostsViewController : BaseTableViewController {
     override func initTableController() {
         self.postSummaryEntity = AppData.passedObject as? PostSummaryEntity
         categoryType = CategoryType(rawValue: (self.postSummaryEntity?.categoryid)!)
-        self.tableViewCellIdentifier = [ViewPostsViewType.ImagesHeaderViewCell.rawValue, ViewPostsViewType.CommonViewCell.rawValue, ViewPostsViewType.ContactsViewCell.rawValue]
+        
+        var headerViewCell = ViewPostsViewType.HeaderViewCell.rawValue
+        if(self.postSummaryEntity?.HasPostTitlePic == true)
+        {
+            headerViewCell = ViewPostsViewType.ImagesHeaderViewCell.rawValue
+        }
+        
+        var bodyViewCell = ViewPostsViewType.CommonViewCell.rawValue
+        if(categoryType == CategoryType.RealEstate)
+        {
+            bodyViewCell = ViewPostsViewType.RealEstateViewCell.rawValue
+        }
+        
+        self.tableViewCellIdentifier = [headerViewCell, bodyViewCell, ViewPostsViewType.ContactsViewCell.rawValue]
         self.items = self.tableViewCellIdentifier
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100

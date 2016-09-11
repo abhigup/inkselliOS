@@ -19,12 +19,12 @@ public class RealEstateEntity: Mappable, IPostEntity{
     var ContactAddress:ContactAdressEntity?
     var PropertyAddress:String?
     var PostTitle:String?
-    var IsRent:Bool?
-    var Is24x7Water:Bool?
-    var IsParking:Bool?
-    var IsPowerBackup:Bool?
+    var IsRent:Bool = false
+    var Is24x7Water:Bool = false
+    var IsParking:Bool = false
+    var IsPowerBackup:Bool = false
     var Bhk:String?
-    var isInternet:Bool?
+    var isInternet:Bool = false
     var AvailableFrom:String?
     var Area:String?
     var PricePerSqFt:String?
@@ -35,8 +35,8 @@ public class RealEstateEntity: Mappable, IPostEntity{
     var longitude:Double?
     var FurnishedType:Int?
     var UserImageUrl:String?
-    var IsSoldOut:Bool?
-    var IsVisibleToAll:Bool?
+    var IsSoldOut:Bool = false
+    var IsVisibleToAll:Bool = false
     
     init() {}
     required convenience public init?(_ map: Map) { self.init() }

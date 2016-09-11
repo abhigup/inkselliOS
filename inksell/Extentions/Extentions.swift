@@ -71,6 +71,7 @@ extension NSDate {
         dateFormatter.dateFormat = format
         return dateFormatter.stringFromDate(self)
     }
+    
 }
 
 extension UIView {
@@ -81,4 +82,13 @@ extension UIView {
             ).instantiateWithOwner(nil, options: nil)[0] as? UIView
     }
 }
+
+extension UIImageView {
+    
+    func setRounded() {
+        self.layer.cornerRadius = self.frame.size.width/2
+        self.clipsToBounds = true
+    }
+}
+
 

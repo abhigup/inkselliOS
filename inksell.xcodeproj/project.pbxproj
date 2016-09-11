@@ -103,6 +103,10 @@
 		ADEFF8431C4F582800185A40 /* VerifyUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */; };
 		ADF6C4091C5A1A9600F3D7D7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF6C4081C5A1A9600F3D7D7 /* Home.storyboard */; };
 		ADF6C4291C65FEDF00F3D7D7 /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C4281C65FEDF00F3D7D7 /* HomeTabController.swift */; };
+		ADFF3FED1D8521EE00F56702 /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFF3FEC1D8521EE00F56702 /* HeaderViewCell.xib */; };
+		ADFF3FEF1D85247300F56702 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF3FEE1D85247300F56702 /* HeaderViewCell.swift */; };
+		ADFF3FF11D852FB500F56702 /* RealEstateViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFF3FF01D852FB500F56702 /* RealEstateViewCell.xib */; };
+		ADFF3FF31D852FC900F56702 /* RealEstateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF3FF21D852FC900F56702 /* RealEstateViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +210,10 @@
 		ADEFF8421C4F582800185A40 /* VerifyUserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyUserEntity.swift; path = inksell/Models/VerifyUserEntity.swift; sourceTree = SOURCE_ROOT; };
 		ADF6C4081C5A1A9600F3D7D7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = inksell/inksell/Home/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		ADF6C4281C65FEDF00F3D7D7 /* HomeTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTabController.swift; path = inksell/inksell/Home/HomeTabController.swift; sourceTree = SOURCE_ROOT; };
+		ADFF3FEC1D8521EE00F56702 /* HeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderViewCell.xib; sourceTree = "<group>"; };
+		ADFF3FEE1D85247300F56702 /* HeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
+		ADFF3FF01D852FB500F56702 /* RealEstateViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealEstateViewCell.xib; sourceTree = "<group>"; };
+		ADFF3FF21D852FC900F56702 /* RealEstateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealEstateViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,12 +275,16 @@
 				ADB7EBEE1C9D5BF400A9C68C /* PostsView.storyboard */,
 				AD5F0A631D73B50E00E5754F /* ImagesHeaderViewCell.xib */,
 				AD5F0A671D73B85800E5754F /* ImagesHeaderViewCell.swift */,
+				ADFF3FEC1D8521EE00F56702 /* HeaderViewCell.xib */,
+				ADFF3FEE1D85247300F56702 /* HeaderViewCell.swift */,
 				AD5F0A651D73B60C00E5754F /* ViewPostsViewType.swift */,
 				AD5F0A6B1D73BC1900E5754F /* BaseViewPostCell.swift */,
 				AD5F0A6D1D73C75E00E5754F /* CommonViewCell.xib */,
 				AD5F0A6F1D73C78000E5754F /* CommonViewCell.swift */,
 				AD5F0A731D7426C200E5754F /* ContactsViewCell.xib */,
 				AD5F0A751D742BBD00E5754F /* ContactsViewCell.swift */,
+				ADFF3FF01D852FB500F56702 /* RealEstateViewCell.xib */,
+				ADFF3FF21D852FC900F56702 /* RealEstateViewCell.swift */,
 			);
 			name = View;
 			path = inksell/inksell/Posts/View;
@@ -600,6 +612,8 @@
 				AD1D09411D696B0800B72F3E /* ContactsAddCell.xib in Resources */,
 				AD9630F31BDBF48F00ADC405 /* LaunchScreen.storyboard in Resources */,
 				AD5F0A641D73B50E00E5754F /* ImagesHeaderViewCell.xib in Resources */,
+				ADFF3FED1D8521EE00F56702 /* HeaderViewCell.xib in Resources */,
+				ADFF3FF11D852FB500F56702 /* RealEstateViewCell.xib in Resources */,
 				AD1D09451D6975E100B72F3E /* CommonAddCell.xib in Resources */,
 				ADDD797C1C71D4960045200E /* TableViewCellWithPic.xib in Resources */,
 				AD1D093F1D69677100B72F3E /* PostsAdd.storyboard in Resources */,
@@ -712,6 +726,7 @@
 				AD47623D1D7813150029FEA5 /* AzureStorageHelper.swift in Sources */,
 				AD5F0A761D742BBD00E5754F /* ContactsViewCell.swift in Sources */,
 				ADEFF83B1C4F53D000185A40 /* MultiplePostDetailsEntity.swift in Sources */,
+				ADFF3FF31D852FC900F56702 /* RealEstateViewCell.swift in Sources */,
 				AD8A2AEF1C6606F500953065 /* MyAccountController.swift in Sources */,
 				AD1D093B1D69604800B72F3E /* AddPostsViewType.swift in Sources */,
 				AD1D092F1D659FC900B72F3E /* ContactsAddCell.swift in Sources */,
@@ -727,6 +742,7 @@
 				ADD8D0DD1C42A2FE00CFCCD2 /* LocationEntity.swift in Sources */,
 				ADDD797B1C71D4960045200E /* TableViewCellWithPic.swift in Sources */,
 				ADEFF8391C4F50DD00185A40 /* RealEstateEntity.swift in Sources */,
+				ADFF3FEF1D85247300F56702 /* HeaderViewCell.swift in Sources */,
 				AD82389C1D71AC6000DC6E57 /* UserInfoController.swift in Sources */,
 				AD9630E91BDBF48F00ADC405 /* AppDelegate.swift in Sources */,
 				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,

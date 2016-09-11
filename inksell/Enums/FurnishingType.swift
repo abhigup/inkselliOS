@@ -13,3 +13,17 @@ enum  FurnishingType :Int {
     SemiFurnished,
     FullyFurnished
 }
+
+extension FurnishingType{
+    static func getFurnishingString(type : Int) -> String {
+        let furnishingType = FurnishingType(rawValue: type)
+        switch furnishingType! {
+        case .FullyFurnished:
+            return "Fully-Furnished"
+        case .SemiFurnished:
+            return "Semi-Furnished"
+        case .UnFurnished:
+            return "Unfurnished"
+        }
+    }
+}
