@@ -152,6 +152,8 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3Nj-0K-sgG"/>
+                                    <constraint firstAttribute="height" constant="50" id="SuK-pk-xAZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wHD-JK-9oG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -159,11 +161,15 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3Nj-0K-sgG"/>
+                                        <exclude reference="SuK-pk-xAZ"/>
+                                        <exclude reference="wHD-JK-9oG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="3Nj-0K-sgG"/>
+                                        <include reference="SuK-pk-xAZ"/>
+                                        <include reference="wHD-JK-9oG"/>
                                     </mask>
                                 </variation>
                             </label>

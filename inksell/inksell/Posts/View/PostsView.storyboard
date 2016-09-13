@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -71,13 +72,13 @@
                                 <exclude reference="HmQ-xK-MQf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TFS-UQ-GEb"/>
+                                <exclude reference="cHI-Y0-f3m"/>
+                                <exclude reference="gHA-NJ-SHv"/>
                                 <exclude reference="AUN-Xm-iGK"/>
                                 <exclude reference="QCq-CJ-feW"/>
                                 <exclude reference="lwB-qJ-c6y"/>
                                 <exclude reference="xcZ-gi-ReW"/>
-                                <exclude reference="cHI-Y0-f3m"/>
-                                <exclude reference="gHA-NJ-SHv"/>
-                                <exclude reference="TFS-UQ-GEb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -86,13 +87,13 @@
                                 <include reference="HmQ-xK-MQf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TFS-UQ-GEb"/>
+                                <include reference="cHI-Y0-f3m"/>
+                                <include reference="gHA-NJ-SHv"/>
                                 <include reference="AUN-Xm-iGK"/>
                                 <include reference="QCq-CJ-feW"/>
                                 <include reference="lwB-qJ-c6y"/>
                                 <include reference="xcZ-gi-ReW"/>
-                                <include reference="cHI-Y0-f3m"/>
-                                <include reference="gHA-NJ-SHv"/>
-                                <include reference="TFS-UQ-GEb"/>
                             </mask>
                         </variation>
                     </view>

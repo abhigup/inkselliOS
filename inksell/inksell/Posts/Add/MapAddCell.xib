@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ejP-q0-cHc" customClass="MapAddCell" customModule="inksell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ejP-q0-cHc" id="neQ-3t-9UZ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ac-Ke-Gr6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-YQ-XMP">
+                                <rect key="frame" x="0.0" y="8" width="320" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="AMG-Vc-obN"/>
+                                </constraints>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Property Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-7m-5zA" customClass="CustomMaterialTextField" customModule="inksell" customModuleProvider="target">
+                                <rect key="frame" x="8" y="190" width="304" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="y0v-ai-GeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e8z-YQ-XMP" firstAttribute="centerX" secondItem="Cm8-7m-5zA" secondAttribute="centerX" id="0B2-v2-e9Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Cm8-7m-5zA" secondAttribute="bottom" constant="7" id="Bfp-ma-bBc"/>
+                            <constraint firstItem="Cm8-7m-5zA" firstAttribute="top" secondItem="e8z-YQ-XMP" secondAttribute="bottom" constant="22" id="Xjk-ss-8vN"/>
+                            <constraint firstItem="Cm8-7m-5zA" firstAttribute="leading" secondItem="0Ac-Ke-Gr6" secondAttribute="leadingMargin" id="Xjn-YB-7oA"/>
+                            <constraint firstItem="e8z-YQ-XMP" firstAttribute="top" secondItem="0Ac-Ke-Gr6" secondAttribute="topMargin" id="boi-Pf-w5X"/>
+                            <constraint firstItem="e8z-YQ-XMP" firstAttribute="leading" secondItem="0Ac-Ke-Gr6" secondAttribute="leading" id="dgn-6c-7DD"/>
+                            <constraint firstAttribute="trailing" secondItem="e8z-YQ-XMP" secondAttribute="trailing" id="ii6-Rh-qQY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="0Ac-Ke-Gr6" firstAttribute="leading" secondItem="neQ-3t-9UZ" secondAttribute="leading" id="0jd-To-JEt"/>
+                    <constraint firstAttribute="trailing" secondItem="0Ac-Ke-Gr6" secondAttribute="trailing" id="0sm-lz-Lnn"/>
+                    <constraint firstItem="0Ac-Ke-Gr6" firstAttribute="top" secondItem="neQ-3t-9UZ" secondAttribute="top" id="egi-5M-rIx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0Ac-Ke-Gr6" secondAttribute="bottom" constant="14.5" id="jcW-4c-9yE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CellView" destination="0Ac-Ke-Gr6" id="7LK-ec-ZQ0"/>
+            </connections>
+            <point key="canvasLocation" x="65" y="178"/>
+        </tableViewCell>
+    </objects>
+</document>

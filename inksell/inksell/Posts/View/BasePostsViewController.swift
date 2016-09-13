@@ -33,7 +33,12 @@ class BasePostsViewController : BaseTableViewController {
             bodyViewCell = ViewPostsViewType.RealEstateViewCell.rawValue
         }
         
-        self.tableViewCellIdentifier = [headerViewCell, bodyViewCell, ViewPostsViewType.ContactsViewCell.rawValue]
+        self.tableViewCellIdentifier = [headerViewCell, bodyViewCell]
+        if(categoryType == CategoryType.RealEstate)
+        {
+            self.tableViewCellIdentifier.append(ViewPostsViewType.MapViewCell.rawValue)
+        }
+        self.tableViewCellIdentifier.append(ViewPostsViewType.ContactsViewCell.rawValue)
         self.items = self.tableViewCellIdentifier
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100

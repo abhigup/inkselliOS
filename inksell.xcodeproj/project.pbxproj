@@ -86,6 +86,12 @@
 		ADDD797E1C71D9FB0045200E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */; };
 		ADDD79811C72B1B70045200E /* TableViewCellWithoutPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD797F1C72B1B70045200E /* TableViewCellWithoutPic.swift */; };
 		ADDD79821C72B1B70045200E /* TableViewCellWithoutPic.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDD79801C72B1B70045200E /* TableViewCellWithoutPic.xib */; };
+		ADE1CD831D867BAB00F6BAD9 /* RealEstateAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE1CD821D867BAB00F6BAD9 /* RealEstateAddCell.xib */; };
+		ADE1CD851D867BC200F6BAD9 /* RealEstateAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1CD841D867BC200F6BAD9 /* RealEstateAddCell.swift */; };
+		ADE1CD871D87D29700F6BAD9 /* MapAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE1CD861D87D29700F6BAD9 /* MapAddCell.xib */; };
+		ADE1CD891D87D2A500F6BAD9 /* MapAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1CD881D87D2A500F6BAD9 /* MapAddCell.swift */; };
+		ADE1CD8F1D87D81100F6BAD9 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1CD8E1D87D81100F6BAD9 /* MapViewCell.swift */; };
+		ADE1CD911D87D81E00F6BAD9 /* MapViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE1CD901D87D81E00F6BAD9 /* MapViewCell.xib */; };
 		ADE2E2221D6D8DC000442AF7 /* IPostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2E2211D6D8DC000442AF7 /* IPostEntity.swift */; };
 		ADEA90B71C44D79B009C5E71 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */; };
 		ADEA90B91C44D99E009C5E71 /* FurnishingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */; };
@@ -193,6 +199,12 @@
 		ADDD797D1C71D9FB0045200E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = inksell/inksell/Common/BaseTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		ADDD797F1C72B1B70045200E /* TableViewCellWithoutPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellWithoutPic.swift; path = inksell/inksell/Common/TableViewCellWithoutPic.swift; sourceTree = SOURCE_ROOT; };
 		ADDD79801C72B1B70045200E /* TableViewCellWithoutPic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellWithoutPic.xib; path = inksell/inksell/Common/TableViewCellWithoutPic.xib; sourceTree = SOURCE_ROOT; };
+		ADE1CD821D867BAB00F6BAD9 /* RealEstateAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealEstateAddCell.xib; sourceTree = "<group>"; };
+		ADE1CD841D867BC200F6BAD9 /* RealEstateAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealEstateAddCell.swift; sourceTree = "<group>"; };
+		ADE1CD861D87D29700F6BAD9 /* MapAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapAddCell.xib; sourceTree = "<group>"; };
+		ADE1CD881D87D2A500F6BAD9 /* MapAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAddCell.swift; sourceTree = "<group>"; };
+		ADE1CD8E1D87D81100F6BAD9 /* MapViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
+		ADE1CD901D87D81E00F6BAD9 /* MapViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewCell.xib; sourceTree = "<group>"; };
 		ADE2E2211D6D8DC000442AF7 /* IPostEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPostEntity.swift; sourceTree = "<group>"; };
 		ADEA90B61C44D79B009C5E71 /* ResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseStatus.swift; path = inksell/Enums/ResponseStatus.swift; sourceTree = SOURCE_ROOT; };
 		ADEA90B81C44D99E009C5E71 /* FurnishingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FurnishingType.swift; path = inksell/Enums/FurnishingType.swift; sourceTree = SOURCE_ROOT; };
@@ -263,6 +275,10 @@
 				AD8238931D70313300DC6E57 /* ImageCell.xib */,
 				AD8238951D7185AB00DC6E57 /* ImageCell.swift */,
 				AD8238971D71865600DC6E57 /* BasePostsAddViewControllerCollectionViewExtention.swift */,
+				ADE1CD821D867BAB00F6BAD9 /* RealEstateAddCell.xib */,
+				ADE1CD841D867BC200F6BAD9 /* RealEstateAddCell.swift */,
+				ADE1CD861D87D29700F6BAD9 /* MapAddCell.xib */,
+				ADE1CD881D87D2A500F6BAD9 /* MapAddCell.swift */,
 			);
 			name = Add;
 			path = inksell/inksell/Posts/Add;
@@ -285,6 +301,8 @@
 				AD5F0A751D742BBD00E5754F /* ContactsViewCell.swift */,
 				ADFF3FF01D852FB500F56702 /* RealEstateViewCell.xib */,
 				ADFF3FF21D852FC900F56702 /* RealEstateViewCell.swift */,
+				ADE1CD901D87D81E00F6BAD9 /* MapViewCell.xib */,
+				ADE1CD8E1D87D81100F6BAD9 /* MapViewCell.swift */,
 			);
 			name = View;
 			path = inksell/inksell/Posts/View;
@@ -606,16 +624,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5F0A7C1D75788C00E5754F /* FavouriteEmptyView.xib in Resources */,
+				ADE1CD911D87D81E00F6BAD9 /* MapViewCell.xib in Resources */,
 				AD5F0A6E1D73C75E00E5754F /* CommonViewCell.xib in Resources */,
 				AD5F0A7E1D757DB300E5754F /* SubscriptionEmptyView.xib in Resources */,
 				AD8238941D70313300DC6E57 /* ImageCell.xib in Resources */,
 				AD1D09411D696B0800B72F3E /* ContactsAddCell.xib in Resources */,
+				ADE1CD871D87D29700F6BAD9 /* MapAddCell.xib in Resources */,
 				AD9630F31BDBF48F00ADC405 /* LaunchScreen.storyboard in Resources */,
 				AD5F0A641D73B50E00E5754F /* ImagesHeaderViewCell.xib in Resources */,
 				ADFF3FED1D8521EE00F56702 /* HeaderViewCell.xib in Resources */,
 				ADFF3FF11D852FB500F56702 /* RealEstateViewCell.xib in Resources */,
 				AD1D09451D6975E100B72F3E /* CommonAddCell.xib in Resources */,
 				ADDD797C1C71D4960045200E /* TableViewCellWithPic.xib in Resources */,
+				ADE1CD831D867BAB00F6BAD9 /* RealEstateAddCell.xib in Resources */,
 				AD1D093F1D69677100B72F3E /* PostsAdd.storyboard in Resources */,
 				AD5F0A741D7426C200E5754F /* ContactsViewCell.xib in Resources */,
 				AD9630F01BDBF48F00ADC405 /* Assets.xcassets in Resources */,
@@ -703,6 +724,7 @@
 				AD8238961D7185AB00DC6E57 /* ImageCell.swift in Sources */,
 				AD1D09271D659DA800B72F3E /* VerticalScreenLayout.swift in Sources */,
 				AD4D99D11C54DB9D0011C31E /* AlertController.swift in Sources */,
+				ADE1CD851D867BC200F6BAD9 /* RealEstateAddCell.swift in Sources */,
 				AD9D42AF1C50D27D00D21EC5 /* ConfigurationManager.swift in Sources */,
 				ADE2E2221D6D8DC000442AF7 /* IPostEntity.swift in Sources */,
 				AD9E39891D5F0ADD00D8D557 /* ScreenName.swift in Sources */,
@@ -717,6 +739,7 @@
 				AD1D09471D6975F300B72F3E /* CommonAddCell.swift in Sources */,
 				ADEFF8331C4F507500185A40 /* ElectronicEntity.swift in Sources */,
 				ADEFF8411C4F576700185A40 /* UserEntity.swift in Sources */,
+				ADE1CD891D87D2A500F6BAD9 /* MapAddCell.swift in Sources */,
 				AD9631091BDD073A00ADC405 /* NewCompanyViewController.swift in Sources */,
 				AD4D99CF1C54414C0011C31E /* MyColors.swift in Sources */,
 				ADBFF6711D69AF8400323667 /* BaseTableViewCell.swift in Sources */,
@@ -748,6 +771,7 @@
 				ADEFF8311C44F6A000185A40 /* DateTimeTransform.swift in Sources */,
 				ADBFF66C1D69A5D400323667 /* CustomMaterialTextField.swift in Sources */,
 				ADDD797E1C71D9FB0045200E /* BaseTableViewController.swift in Sources */,
+				ADE1CD8F1D87D81100F6BAD9 /* MapViewCell.swift in Sources */,
 				AD4D99D31C54DCDB0011C31E /* Extentions.swift in Sources */,
 				ADEFF83D1C4F557B00185A40 /* PostIdWithCategory.swift in Sources */,
 				ADDD796E1C71C3180045200E /* HomeController.swift in Sources */,

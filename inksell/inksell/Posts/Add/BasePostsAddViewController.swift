@@ -39,6 +39,9 @@ class BasePostsAddViewController: BaseTableViewController, IImagePickerProtocol 
             let imageView = view as! ImagesAddCell
             imageView.setDelegate(self)
         }
+        view.contentView.setNeedsLayout()
+        view.contentView.layoutIfNeeded()
+
         return view
     }
     
@@ -147,22 +150,20 @@ class BasePostsAddViewController: BaseTableViewController, IImagePickerProtocol 
     
     override func initTableController() {
         categoryType = CategoryType(rawValue:AppData.passedObject as! Int)!
-        self.tableViewCellIdentifier = [AddPostsViewType.CommonAddCell.rawValue, AddPostsViewType.ImagesAddCell.rawValue, AddPostsViewType.ContactsAddCell.rawValue]
-        self.items = self.tableViewCellIdentifier
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-    {
-        let viewType : AddPostsViewType = AddPostsViewType(rawValue:self.items[indexPath.row] as! String)!
-        switch viewType {
-        case .CommonAddCell:
-            return 400
-        case .ContactsAddCell:
-            return 400
-        case .ImagesAddCell:
-            return 150
-        default:
-            return 100
+        var detailsView = AddPostsViewType.CommonAddCell.rawValue
+        if(categoryType == .RealEstate)
+        {
+            detailsView = AddPostsViewType.RealEstateAddCell.rawValue
         }
+        self.tableViewCellIdentifier = [detailsView]
+        if(categoryType == .RealEstate)
+        {
+            self.tableViewCellIdentifier.append(AddPostsViewType.MapAddCell.rawValue)
+        }
+        self.tableViewCellIdentifier.append(AddPostsViewType.ImagesAddCell.rawValue)
+        self.tableViewCellIdentifier.append(AddPostsViewType.ContactsAddCell.rawValue)
+        self.items = self.tableViewCellIdentifier
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
 }
